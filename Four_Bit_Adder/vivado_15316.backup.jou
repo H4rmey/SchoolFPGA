@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Nov  8 21:32:09 2018
+# Process ID: 15316
+# Current directory: C:/Users/hammi/Documents/GitBucket/SchoolFPGA/Four_Bit_Adder
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14160 C:\Users\hammi\Documents\GitBucket\SchoolFPGA\Four_Bit_Adder\Four_Bit_Adder.xpr
+# Log file: C:/Users/hammi/Documents/GitBucket/SchoolFPGA/Four_Bit_Adder/vivado.log
+# Journal file: C:/Users/hammi/Documents/GitBucket/SchoolFPGA/Four_Bit_Adder\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hammi/Documents/GitBucket/SchoolFPGA/Four_Bit_Adder/Four_Bit_Adder.xpr
+update_compile_order -fileset sources_1

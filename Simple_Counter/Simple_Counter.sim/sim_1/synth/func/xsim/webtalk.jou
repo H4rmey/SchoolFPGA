@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Nov 11 15:03:18 2018
+# Process ID: 16904
+# Current directory: C:/Users/hammi/Documents/GitBucket/SchoolFPGA/Simple_Counter/Simple_Counter.sim/sim_1/synth/func/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/hammi/Documents/GitBucket/SchoolFPGA/Simple_Counter/Simple_Counter.sim/sim_1/synth/func/xsim/xsim.dir/T_FlipFlop_func_synth/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/hammi/Documents/GitBucket/SchoolFPGA/Simple_Counter/Simple_Counter.sim/sim_1/synth/func/xsim/webtalk.log
+# Journal file: C:/Users/hammi/Documents/GitBucket/SchoolFPGA/Simple_Counter/Simple_Counter.sim/sim_1/synth/func/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/hammi/Documents/GitBucket/SchoolFPGA/Simple_Counter/Simple_Counter.sim/sim_1/synth/func/xsim/xsim.dir/T_FlipFlop_func_synth/webtalk/xsim_webtalk.tcl -notrace

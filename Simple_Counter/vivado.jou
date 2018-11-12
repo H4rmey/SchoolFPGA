@@ -1,0 +1,64 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Nov 11 16:56:50 2018
+# Process ID: 21112
+# Current directory: C:/Users/hammi/Documents/GitBucket/SchoolFPGA/Simple_Counter
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18912 C:\Users\hammi\Documents\GitBucket\SchoolFPGA\Simple_Counter\Simple_Counter.xpr
+# Log file: C:/Users/hammi/Documents/GitBucket/SchoolFPGA/Simple_Counter/vivado.log
+# Journal file: C:/Users/hammi/Documents/GitBucket/SchoolFPGA/Simple_Counter\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hammi/Documents/GitBucket/SchoolFPGA/Simple_Counter/Simple_Counter.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+reset_run impl_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+close_design
+open_run impl_1
+synth_design -rtl -name rtl_1
+set_property package_pin "" [get_ports [list  CLK_enable]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list CLK_enable]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list Q]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list T]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list CLK]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list Reset]]
+place_ports CLK_enable V17
+place_ports T V16
+place_ports CLK W16
+place_ports Reset W17
+place_ports Q U16
+set_property SLEW SLOW [get_ports [list Q]]
+file mkdir C:/Users/hammi/Documents/GitBucket/SchoolFPGA/Simple_Counter/Simple_Counter.srcs/constrs_1/new
+close [ open C:/Users/hammi/Documents/GitBucket/SchoolFPGA/Simple_Counter/Simple_Counter.srcs/constrs_1/new/T_FlipFlop_NoCLK.xdc w ]
+add_files -fileset constrs_1 C:/Users/hammi/Documents/GitBucket/SchoolFPGA/Simple_Counter/Simple_Counter.srcs/constrs_1/new/T_FlipFlop_NoCLK.xdc
+set_property target_constrs_file C:/Users/hammi/Documents/GitBucket/SchoolFPGA/Simple_Counter/Simple_Counter.srcs/constrs_1/new/T_FlipFlop_NoCLK.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+current_design impl_1
+refresh_design

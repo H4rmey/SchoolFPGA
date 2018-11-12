@@ -1,0 +1,3 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hammi/OneDrive/Documenten/BitBucket/SchoolFPGA/4-bits adder/4-bits adder.sim/sim_1/synth/func/xsim/FourBitAdder_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FourBitAdder
+INFO: [VRFC 10-311] analyzing module glbl
