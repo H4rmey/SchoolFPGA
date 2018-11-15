@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
-set_param synth.incrementalSynthesisCache C:/Users/hammi/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-10704-DESKTOP-Q23M08U/incrSyn
+set_param synth.incrementalSynthesisCache C:/Users/hammi/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-10928-DESKTOP-Q23M08U/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
