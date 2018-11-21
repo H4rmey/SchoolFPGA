@@ -12,13 +12,6 @@ entity Adder is
 end Adder;
 
 architecture Behavioral of Adder is
-
-    signal A, B : std_logic_vector(7 downto 0);
-    signal S : std_logic_vector(8 downto 0);
-
 begin
-    S <= ('0' & A) + ('0' & B);
-    A <= inA;
-    B <= inB;
-
+    sum <= ('0' & inA) + ('0' & inB);
 end Behavioral;

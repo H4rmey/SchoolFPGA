@@ -1,0 +1,649 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 13916
+License: Customer
+
+Current time: 	Wed Nov 21 23:56:44 CET 2018
+Time zone: 	Central European Time (Europe/Berlin)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 115 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	hammi
+User home directory: C:/Users/hammi
+User working directory: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.4
+RDI_DATADIR: C:/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/hammi/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/hammi/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/hammi/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/vivado.log
+Vivado journal file location: 	C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/vivado.jou
+Engine tmp dir: 	C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/.Xil/Vivado-13916-DESKTOP-7MRF67A
+
+GUI allocated memory:	191 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 611 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\hammi\OneDrive\Documenten\bitbucket\SchoolFPGA\BCD_Adder\BCD_Adder.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// [GUI Memory]: 50 MB (+49759kb) [00:00:04]
+// [Engine Memory]: 496 MB (+368314kb) [00:00:04]
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 63 MB (+10900kb) [00:00:05]
+// [GUI Memory]: 66 MB (+541kb) [00:00:05]
+// [Engine Memory]: 545 MB (+25929kb) [00:00:05]
+// [GUI Memory]: 79 MB (+9544kb) [00:00:05]
+// Tcl Message: open_project C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'. 
+// Project name: BCD_Adder; location: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder; part: xc7a35tcpg236-1
+// [GUI Memory]: 93 MB (+10659kb) [00:00:06]
+// [Engine Memory]: 611 MB (+39876kb) [00:00:06]
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 615 MB. GUI used memory: 40 MB. Current time: 11/21/18 11:56:46 PM CET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceQtoS.RunGadget_SHOW_ERROR, "4 errors"); // h (N, cj)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-549] port width mismatch for port 'binOut': port width = 4, actual width = 8 [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.srcs/sources_1/new/Main.vhd:44]. ]", 1, true); // ah (O, cj) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\hammi\OneDrive\Documenten\bitbucket\SchoolFPGA\BCD_Adder\BCD_Adder.srcs\sources_1\new\Main.vhd;-;;-;16;-;line;-;44;-;;-;16;-;"); // ah (O, cj)
+selectCodeEditor("Main.vhd", 328, 175); // cd (w, cj)
+selectCodeEditor("Main.vhd", 264, 232); // cd (w, cj)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd)]", 2); // B (D, cj)
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aw (f, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "Run Implementation"); // ac (cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bs (cj):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunImplementation_THERE_NO_NETLIST_AVAILABLE_OK_OK", "OK"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 6 
+// Tcl Message: [Wed Nov 21 23:57:10 2018] Launched synth_1... Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/synth_1/runme.log [Wed Nov 21 23:57:10 2018] Launched impl_1... Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: RUN_FAILED
+// ah (cj): Synthesis Failed: addNotify
+// Elapsed time: 13 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cj)
+selectCodeEditor("Main.vhd", 266, 236); // cd (w, cj)
+selectCodeEditor("Main.vhd", 261, 236); // cd (w, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-549] port width mismatch for port 'segmSelect': port width = 2, actual width = 4 [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.srcs/sources_1/new/Main.vhd:45]. ]", 1, false); // ah (O, cj)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\hammi\OneDrive\Documenten\bitbucket\SchoolFPGA\BCD_Adder\BCD_Adder.srcs\sources_1\new\Main.vhd;-;;-;16;-;line;-;45;-;;-;16;-;"); // ah (O, cj)
+// [Engine Memory]: 666 MB (+25933kb) [00:00:52]
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-549] port width mismatch for port 'segmSelect': port width = 2, actual width = 4 [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.srcs/sources_1/new/Main.vhd:45]. ]", 1, false); // ah (O, cj)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\hammi\OneDrive\Documenten\bitbucket\SchoolFPGA\BCD_Adder\BCD_Adder.srcs\sources_1\new\Main.vhd;-;;-;16;-;line;-;45;-;;-;16;-;"); // ah (O, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 666 MB. GUI used memory: 43 MB. Current time: 11/21/18 11:57:31 PM CET
+selectCodeEditor("Main.vhd", 357, 26); // cd (w, cj)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), BCDOut : BCDOutput(Behavioral) (BCDOutput.vhd)]", 5, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), ToSegm : xil_defaultlib.ToSeg_default]", 6, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), ToSegm : xil_defaultlib.ToSeg_default]", 6, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), BCDOut : BCDOutput(Behavioral) (BCDOutput.vhd)]", 5, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), BCDOut : BCDOutput(Behavioral) (BCDOutput.vhd)]", 5, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("BCDOutput.vhd", 159, 431); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 199, 435); // cd (w, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), ADD : Adder(Behavioral) (Adder.vhd)]", 3, false); // B (D, cj)
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aw (f, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "Run Implementation"); // ac (cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bs (cj):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunImplementation_THERE_NO_NETLIST_AVAILABLE_OK_OK", "OK"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 6 
+// Tcl Message: [Wed Nov 21 23:58:12 2018] Launched synth_1... Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/synth_1/runme.log [Wed Nov 21 23:58:12 2018] Launched impl_1... Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// ah (cj): Implementation Failed: addNotify
+// Elapsed time: 67 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // ah (cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Design Level, [DRC INBB-3] Black Box Instances: Cell 'ToSegm' of type 'ToSeg' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.. ]", 9, false); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Design Level, [DRC INBB-3] Black Box Instances: Cell 'ToSegm' of type 'ToSeg' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.. ]", 9, false, false, false, false, false, true); // ah (O, cj) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Design Level, [DRC INBB-3] Black Box Instances: Cell 'ToSegm' of type 'ToSeg' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.. ]", 9, false); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Design Level, [DRC INBB-3] Black Box Instances: Cell 'ToSegm' of type 'ToSeg' has undefined contents and is considered a black box.  The contents of this cell must be defined for opt_design to complete successfully.. ]", 9, false, false, false, false, false, true); // ah (O, cj) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 49 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), ToSegm : xil_defaultlib.ToSeg_default]", 6, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), ToSegm : xil_defaultlib.ToSeg_default]", 6, false, false, false, false, true, false); // B (D, cj) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cj)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, cj)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, cj)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, cj)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), ToSegm : xil_defaultlib.ToSeg_default]", 6, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), ToSegm : xil_defaultlib.ToSeg_default]", 6, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), ToSegm : xil_defaultlib.ToSeg_default]", 6, false, false, false, false, true, false); // B (D, cj) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), ToSegm : xil_defaultlib.ToSeg]", 6, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), ToSegm : xil_defaultlib.ToSeg]", 6, false, false, false, false, true, false); // B (D, cj) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, cj)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cj): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (h, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "VHDL", 3); // bY (N, F)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "ToSeg"); // X (N, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// HOptionPane Warning: ''ToSeg.vhd' already exists. Please enter another name. (Create Source File)'
+selectButton("PAResourceAtoD.CreateSrcFileDialog_FILE_WITH_SPECIFIED_NAME_ALREADY_OK", "OK"); // JButton (A, H)
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (h, c)
+// 'h' command handler elapsed time: 17 seconds
+dismissDialog("Add Sources"); // c (cj)
+// Tcl Message: close [ open C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.srcs/sources_1/new/ToSeg.vhd w ] 
+// Tcl Message: add_files C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.srcs/sources_1/new/ToSeg.vhd 
+// I (cj): Define Module: addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), ToSegm : xil_defaultlib.ToSeg]", 6, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), ToSegm : xil_defaultlib.ToSeg]", 6, false, false, false, false, false, true); // B (D, cj) - Double Click
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), ToSegm : ToSeg(Behavioral) (ToSeg.vhd)]", 5, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), ToSegm : ToSeg(Behavioral) (ToSeg.vhd)]", 5, false, false, false, false, false, true); // B (D, cj) - Double Click
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("ToSeg.vhd", 39, 32); // cd (w, cj)
+typeControlKey((HResource) null, "ToSeg.vhd", 'v'); // cd (w, cj)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 26 seconds
+selectCodeEditor("ToSeg.vhd", 138, 247); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 340, 373); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 23, 389); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 85, 174); // cd (w, cj)
+// Elapsed time: 14 seconds
+selectButton(RDIResourceCommand.RDICommands_SETTINGS, "settings"); // B (f, cj)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// v (cj): Settings: addNotify
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, Elaboration]", 2, false); // M (C, v)
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, Synthesis]", 3, false); // M (C, v)
+// HMemoryUtils.trashcanNow. Engine heap size: 702 MB. GUI used memory: 63 MB. Current time: 11/22/18 12:01:41 AM CET
+// [Engine Memory]: 702 MB (+3250kb) [00:05:04]
+dismissDialog("Settings"); // v (cj)
+// Elapsed time: 48 seconds
+selectCodeEditor("ToSeg.vhd", 123, 185); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 110, 199); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 89, 174); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 123, 199); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 390, 194); // cd (w, cj)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("ToSeg.vhd", 423, 188); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 400, 278); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 208, 283); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 151, 466); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 83, 213); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 151, 177); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 138, 196); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 157, 460); // cd (w, cj)
+typeControlKey((HResource) null, "ToSeg.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 83, 465); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 192, 413); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 227, 428); // cd (w, cj)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 105 MB (+7964kb) [00:06:51]
+selectCodeEditor("ToSeg.vhd", 386, 199); // cd (w, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// x (cj): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // x (cj)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// [GUI Memory]: 114 MB (+3756kb) [00:06:58]
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 6 
+// Tcl Message: [Thu Nov 22 00:03:36 2018] Launched synth_1... Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/synth_1/runme.log [Thu Nov 22 00:03:36 2018] Launched impl_1... Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+selectCodeEditor("ToSeg.vhd", 370, 210); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 374, 197); // cd (w, cj)
+// TclEventType: RUN_FAILED
+// ah (cj): Synthesis Failed: addNotify
+// Elapsed time: 10 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cj)
+selectCodeEditor("ToSeg.vhd", 293, 181); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 248, 206); // cd (w, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator]", 1); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bs (cj):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunImplementation_THERE_NO_NETLIST_AVAILABLE_OK_OK", "OK"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// am (cj): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (am)
+// bs (cj):  Save Constraints : addNotify
+// [GUI Memory]: 125 MB (+5677kb) [00:07:29]
+// TclEventType: DG_GRAPH_STALE
+// f (cj): Launch Runs: addNotify
+dismissDialog("Save Project"); // am (cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+dismissDialog("Launch Runs"); // f (cj)
+// Tcl Message: launch_runs impl_1 -jobs 6 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Nov 22 00:04:08 2018] Launched synth_1... Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/synth_1/runme.log [Thu Nov 22 00:04:08 2018] Launched impl_1... Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_FAILED
+// ah (cj): Synthesis Failed: addNotify
+// Elapsed time: 14 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-690] width mismatch in assignment; target has 8 bits, source has 7 bits [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.srcs/sources_1/new/ToSeg.vhd:19]. ]", 4, false); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-690] width mismatch in assignment; target has 8 bits, source has 7 bits [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.srcs/sources_1/new/ToSeg.vhd:19]. ]", 4, false); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-690] width mismatch in assignment; target has 8 bits, source has 7 bits [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.srcs/sources_1/new/ToSeg.vhd:19]. ]", 4, false); // ah (O, cj)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\hammi\OneDrive\Documenten\bitbucket\SchoolFPGA\BCD_Adder\BCD_Adder.srcs\sources_1\new\ToSeg.vhd;-;;-;16;-;line;-;19;-;;-;16;-;"); // ah (O, cj)
+selectCodeEditor("ToSeg.vhd", 325, 229); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 327, 231); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 293, 178); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 311, 61); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Main.vhd", 1); // k (j, cj)
+selectCodeEditor("Main.vhd", 309, 292); // cd (w, cj)
+selectCodeEditor("Main.vhd", 329, 211); // cd (w, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis]", 3); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bs (cj):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunImplementation_THERE_NO_NETLIST_AVAILABLE_OK_OK", "OK"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// am (cj): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (am)
+// bs (cj):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// f (cj): Launch Runs: addNotify
+dismissDialog("Save Project"); // am (cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectComboBox(PAResourceItoN.NumJobsChooser_NUMBER_OF_JOBS, "12", 11); // e (aU, f)
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 12 
+// Tcl Message: [Thu Nov 22 00:05:01 2018] Launched synth_1... Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/synth_1/runme.log [Thu Nov 22 00:05:01 2018] Launched impl_1... Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 5 seconds
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: RUN_COMPLETED
+// Elapsed time: 35 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.srcs/sources_1/new/BCDOutput.vhd:26]. ]", 4, true); // ah (O, cj) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\hammi\OneDrive\Documenten\bitbucket\SchoolFPGA\BCD_Adder\BCD_Adder.srcs\sources_1\new\BCDOutput.vhd;-;;-;16;-;line;-;26;-;;-;16;-;"); // ah (O, cj)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cj): Implementation Completed: addNotify
+// Elapsed time: 48 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (N, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// Tcl Message: [Thu Nov 22 00:06:28 2018] Launched impl_1... Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/impl_1/runme.log 
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0); // u (O, cj)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // u (O, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 15, false); // u (O, cj)
+// x (cj): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (x)
+// bs (cj):  Open Elaborated Design : addNotify
+// TclEventType: ELABORATE_START
+dismissDialog("Elaborate Design"); // x (cj)
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a35tcpg236-1 Top: Main 
+// HMemoryUtils.trashcanNow. Engine heap size: 772 MB. GUI used memory: 63 MB. Current time: 11/22/18 12:06:41 AM CET
+// [Engine Memory]: 904 MB (+174172kb) [00:10:06]
+// TclEventType: ELABORATE_FINISH
+// [Engine Memory]: 1,052 MB (+108493kb) [00:10:11]
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,073 MB. GUI used memory: 63 MB. Current time: 11/22/18 12:06:49 AM CET
+// [Engine Memory]: 1,110 MB (+5901kb) [00:10:12]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 960.957 ; gain = 92.723 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1002.172 ; gain = 133.938 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1002.172 ; gain = 133.938 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a35tcpg236-1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 1326.512 ; gain = 458.277 
+// Tcl Message: 19 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 1326.512 ; gain = 458.277 
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+// Elapsed time: 14 seconds
+dismissDialog("Open Elaborated Design"); // bs (cj)
+// [Engine Memory]: 1,167 MB (+917kb) [00:10:14]
+// TclEventType: RUN_FAILED
+// ah (cj): Bitstream Generation Failed: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Failed"); // ah (cj)
+// [GUI Memory]: 135 MB (+3110kb) [00:10:39]
+// Elapsed time: 22 seconds
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // k (j, cj)
+selectButton(PAResourceQtoS.SchematicView_REGENERATE, "Schematic_refresh"); // B (f, cj)
+selectButton(PAResourceItoN.NetlistSchematicView_SHOW_IO_PORTS_IN_THIS_SCHEMATIC, "26 I/O Ports"); // h (f, cj)
+selectTableHeader(PAResourceQtoS.SignalTablePanel_SIGNAL_TABLE, "Name", 0); // t (O, cj)
+// [GUI Memory]: 143 MB (+2264kb) [00:10:56]
+selectTableHeader(PAResourceQtoS.SignalTablePanel_SIGNAL_TABLE, "Name", 0); // t (O, cj)
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Main.vhd", 2); // k (j, cj)
+selectCodeEditor("Main.vhd", 357, 233); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("Main.vhd", 310, 197); // cd (w, cj)
+selectCodeEditor("Main.vhd", 391, 201); // cd (w, cj)
+selectCodeEditor("Main.vhd", 382, 371); // cd (w, cj)
+selectCodeEditor("Main.vhd", 382, 371, false, false, false, false, true); // cd (w, cj) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "BCDOutput.vhd", 3); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ToSeg.vhd", 4); // k (j, cj)
+selectCodeEditor("ToSeg.vhd", 308, 144); // cd (w, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,183 MB. GUI used memory: 94 MB. Current time: 11/22/18 12:08:31 AM CET
+selectCodeEditor("ToSeg.vhd", 299, 152); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 306, 143); // cd (w, cj)
+selectCodeEditor("ToSeg.vhd", 303, 143); // cd (w, cj)
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aF (Q, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), BCDOut : BCDOutput(Behavioral) (BCDOutput.vhd)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), BCDOut : BCDOutput(Behavioral) (BCDOutput.vhd)]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), BinTB : BinToBCD(Behavioral) (BinToBCD.vhd)]", 3, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), BinTB : BinToBCD(Behavioral) (BinToBCD.vhd)]", 3, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), BCDOut : BCDOutput(Behavioral) (BCDOutput.vhd)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), BCDOut : BCDOutput(Behavioral) (BCDOutput.vhd)]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), BCDOut : BCDOutput(Behavioral) (BCDOutput.vhd)]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Main(Behavioral) (Main.vhd), BCDOut : BCDOutput(Behavioral) (BCDOutput.vhd)]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("BCDOutput.vhd", 328, 229); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 230, 328); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 232, 164); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 231, 198); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 229, 230); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 230, 267); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 141, 178); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 135, 214); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 141, 246); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 140, 276); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 293, 280); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 286, 176); // cd (w, cj)
+// Elapsed time: 14 seconds
+selectCodeEditor("BCDOutput.vhd", 315, 379); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 332, 227); // cd (w, cj)
+typeControlKey((HResource) null, "BCDOutput.vhd", 'c'); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 290, 267); // cd (w, cj)
+typeControlKey((HResource) null, "BCDOutput.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 286, 315); // cd (w, cj)
+typeControlKey((HResource) null, "BCDOutput.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 295, 369); // cd (w, cj)
+typeControlKey((HResource) null, "BCDOutput.vhd", 'v'); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 305, 335); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 167, 277); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 171, 382); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 300, 281); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 300, 332); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 302, 384); // cd (w, cj)
+selectCodeEditor("BCDOutput.vhd", 326, 381); // cd (w, cj)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 21, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis]", 4); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// x (cj): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // x (cj)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// am (cj): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (am)
+// bs (cj):  Save Constraints : addNotify
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// f (cj): Launch Runs: addNotify
+dismissDialog("Save Project"); // am (cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -jobs 12 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Nov 22 00:09:49 2018] Launched synth_1... Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/synth_1/runme.log [Thu Nov 22 00:09:49 2018] Launched impl_1... Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: RUN_FAILED
+// ah (cj): Synthesis Failed: addNotify
+// Elapsed time: 13 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-549] port width mismatch for port 'segmSelect': port width = 4, actual width = 2 [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.srcs/sources_1/new/Main.vhd:83]. ]", 4, false); // ah (O, cj)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\hammi\OneDrive\Documenten\bitbucket\SchoolFPGA\BCD_Adder\BCD_Adder.srcs\sources_1\new\Main.vhd;-;;-;16;-;line;-;83;-;;-;16;-;"); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-549] port width mismatch for port 'segmSelect': port width = 4, actual width = 2 [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.srcs/sources_1/new/Main.vhd:83]. ]", 4, false); // ah (O, cj)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\hammi\OneDrive\Documenten\bitbucket\SchoolFPGA\BCD_Adder\BCD_Adder.srcs\sources_1\new\Main.vhd;-;;-;16;-;line;-;83;-;;-;16;-;"); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands]", 0, true); // ah (O, cj) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\hammi\OneDrive\Documenten\bitbucket\SchoolFPGA\BCD_Adder\BCD_Adder.srcs\sources_1\new\Main.vhd;-;;-;16;-;line;-;83;-;;-;16;-;"); // ah (O, cj)
+selectCodeEditor("Main.vhd", 372, 249); // cd (w, cj)
+selectCodeEditor("Main.vhd", 372, 249); // cd (w, cj)
+selectCodeEditor("Main.vhd", 372, 249, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("Main.vhd", 352, 193); // cd (w, cj)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cj)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 21, false); // u (O, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 21, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bs (cj):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunImplementation_THERE_NO_NETLIST_AVAILABLE_OK_OK", "OK"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 12 
+// Tcl Message: [Thu Nov 22 00:10:25 2018] Launched synth_1... Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/synth_1/runme.log [Thu Nov 22 00:10:25 2018] Launched impl_1... Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// [GUI Memory]: 152 MB (+1240kb) [00:14:10]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 68 seconds
+selectCodeEditor("Main.vhd", 430, 124); // cd (w, cj)
+// TclEventType: RUN_COMPLETED
+selectCodeEditor("Main.vhd", 463, 124); // cd (w, cj)
+// ah (cj): Implementation Completed: addNotify
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (N, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (cj)
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// bs (cj):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu Nov 22 00:11:39 2018] Launched impl_1... Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cj)
+// Elapsed time: 19 seconds
+selectButton(RDIResource.FilterToolBar_SHOW_ALL, "Show All"); // a (f, cj)
+selectCheckBox(PAResourceItoN.MsgView_STATUS_MESSAGES, (String) null, false); // g (aQ, cj): FALSE
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // g (aQ, cj): FALSE
+// TclEventType: RUN_FAILED
+// ah (cj): Bitstream Generation Failed: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ah (cj)
+selectCodeEditor(PAResourceItoN.LogMonitor_MONITOR, 490, 219); // n (q, cj)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aF (Q, cj)
+// Elapsed time: 27 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,203 MB. GUI used memory: 96 MB. Current time: 11/22/18 12:12:41 AM CET
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "BCDOutput.vhd", 3); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "BCDOutput.vhd", 4); // k (j, cj)

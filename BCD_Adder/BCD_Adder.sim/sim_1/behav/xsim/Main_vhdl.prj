@@ -1,5 +1,7 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
+"../../../../BCD_Adder.srcs/sources_1/new/Adder.vhd" \
+"../../../../BCD_Adder.srcs/sources_1/new/BCDOutput.vhd" \
 "../../../../BCD_Adder.srcs/sources_1/new/BinToBCD.vhd" \
 "../../../../BCD_Adder.srcs/sources_1/new/Main.vhd" \
 

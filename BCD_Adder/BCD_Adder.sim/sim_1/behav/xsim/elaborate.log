@@ -12,6 +12,9 @@ Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Adder [adder_default]
 Compiling architecture behavioral of entity xil_defaultlib.BinToBCD [bintobcd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BCDOutput [bcdoutput_default]
 Compiling architecture behavioral of entity xil_defaultlib.main
 Built simulation snapshot Main_behav
