@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Thu Nov 22 00:37:11 2018
+| Date         : Thu Nov 22 23:16:49 2018
 | Host         : DESKTOP-7MRF67A running 64-bit major release  (build 9200)
 | Command      : report_drc -file Main_drc_routed.rpt -pb Main_drc_routed.pb -rpx Main_drc_routed.rpx
 | Design       : Main
@@ -24,13 +24,11 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 6
+             Violations found: 4
 +----------+------------------+-----------------------------------------------------+------------+
 | Rule     | Severity         | Description                                         | Violations |
 +----------+------------------+-----------------------------------------------------+------------+
 | LUTLP-1  | Critical Warning | Combinatorial Loop Alert                            | 3          |
-| NSTD-1   | Critical Warning | Unspecified I/O Standard                            | 1          |
-| UCIO-1   | Critical Warning | Unconstrained Logical Port                          | 1          |
 | CFGBVS-1 | Warning          | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
 +----------+------------------+-----------------------------------------------------+------------+
 
@@ -38,27 +36,17 @@ Table of Contents
 -----------------
 LUTLP-1#1 Critical Warning
 Combinatorial Loop Alert  
-33 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is BCDOut/binOut[1]_i_4_n_0. Please evaluate your design. The cells in the loop are: BCDOut/binOut[1]_i_4, BCDOut/binOut[1]_i_33, BCDOut/binOut[1]_i_34, BCDOut/binOut[2]_i_4, BCDOut/binOut[2]_i_11, BCDOut/binOut[2]_i_12, BCDOut/binOut[2]_i_17, BCDOut/binOut[3]_i_8, BCDOut/binOut[3]_i_14, BCDOut/binOut[3]_i_15, binOut[3]_i_22, BCDOut/binOut[3]_i_23, binOut[3]_i_24, BCDOut/binOut[3]_i_27, BCDOut/binOut[3]_i_34 (the first 15 of 33 listed).
+19 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is BCDOut/tens[1]. Please evaluate your design. The cells in the loop are: BCDOut/binOut[1]_i_4, BCDOut/binOut[2]_i_4, BCDOut/binOut[3]_i_8, BCDOut/binOut[3]_i_19, BCDOut/binOut[3]_i_21, BCDOut/binOut[3]_i_22, BCDOut/binOut[3]_i_30, BCDOut/binOut[3]_i_32, BCDOut/binOut[3]_i_43, BCDOut/binOut[3]_i_55, BCDOut/binOut[3]_i_56, BCDOut/binOut[3]_i_57, BCDOut/binOut[3]_i_58, BCDOut/binOut[3]_i_59, BCDOut/binOut[3]_i_70 (the first 15 of 19 listed).
 Related violations: <none>
 
 LUTLP-1#2 Critical Warning
 Combinatorial Loop Alert  
-40 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is BCDOut/binOut[0]_i_9_n_0. Please evaluate your design. The cells in the loop are: BCDOut/binOut[0]_i_9, BCDOut/binOut[1]_i_3, BCDOut/binOut[1]_i_9, BCDOut/binOut[1]_i_10, BCDOut/binOut[1]_i_11, BCDOut/binOut[2]_i_3, BCDOut/binOut[2]_i_9, BCDOut/binOut[2]_i_15, BCDOut/binOut[3]_i_18, BCDOut/binOut[3]_i_19, BCDOut/binOut[3]_i_20, BCDOut/binOut[3]_i_21, BCDOut/binOut[3]_i_42, BCDOut/binOut[3]_i_43, BCDOut/binOut[3]_i_44 (the first 15 of 40 listed).
+24 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is BCDOut/ones[1]. Please evaluate your design. The cells in the loop are: BCDOut/binOut[1]_i_2, BCDOut/binOut[3]_i_10, BCDOut/binOut[3]_i_11, BCDOut/binOut[3]_i_12, BCDOut/binOut[3]_i_25, BCDOut/binOut[3]_i_26, BCDOut/binOut[3]_i_27, BCDOut/binOut[3]_i_44, BCDOut/binOut[3]_i_46, BCDOut/binOut[3]_i_51, BCDOut/binOut[3]_i_52, BCDOut/binOut[3]_i_53, BCDOut/binOut[3]_i_74, BCDOut/binOut[3]_i_75, BCDOut/binOut[3]_i_76 (the first 15 of 24 listed).
 Related violations: <none>
 
 LUTLP-1#3 Critical Warning
 Combinatorial Loop Alert  
-46 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is BCDOut/binOut_reg[1]_0. Please evaluate your design. The cells in the loop are: BCDOut/binOut[1]_i_2, binOut[1]_i_5, binOut[1]_i_6, BCDOut/binOut[1]_i_7, binOut[1]_i_8, BCDOut/binOut[1]_i_12, BCDOut/binOut[1]_i_13, BCDOut/binOut[1]_i_15, BCDOut/binOut[1]_i_16, BCDOut/binOut[1]_i_17, BCDOut/binOut[1]_i_19, BCDOut/binOut[1]_i_23, BCDOut/binOut[1]_i_25, BCDOut/binOut[1]_i_26, BCDOut/binOut[1]_i_28 (the first 15 of 46 listed).
-Related violations: <none>
-
-NSTD-1#1 Critical Warning
-Unspecified I/O Standard  
-28 out of 28 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: inputA[7:0], inputB[7:0], segmOutput[6:0], segmSelection[3:0], clock.
-Related violations: <none>
-
-UCIO-1#1 Critical Warning
-Unconstrained Logical Port  
-28 out of 28 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: inputA[7:0], inputB[7:0], segmOutput[6:0], segmSelection[3:0], clock.
+35 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. If the loop is known and understood, this DRC can be bypassed by acknowledging the condition and setting the following XDC constraint on any one of the nets in the loop: 'set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]'. One net in the loop is BCDOut/binOut_reg[2]_0[1]. Please evaluate your design. The cells in the loop are: BCDOut/binOut[1]_i_3, BCDOut/binOut[2]_i_3, BCDOut/binOut[2]_i_6, BCDOut/binOut[3]_i_13, BCDOut/binOut[3]_i_14, BCDOut/binOut[3]_i_16, BCDOut/binOut[3]_i_17, BCDOut/binOut[3]_i_28, BCDOut/binOut[3]_i_29, BCDOut/binOut[3]_i_35, BCDOut/binOut[3]_i_36, BCDOut/binOut[3]_i_38, BCDOut/binOut[3]_i_39, BCDOut/binOut[3]_i_60, BCDOut/binOut[3]_i_63 (the first 15 of 35 listed).
 Related violations: <none>
 
 CFGBVS-1#1 Warning

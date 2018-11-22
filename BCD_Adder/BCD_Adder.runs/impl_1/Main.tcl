@@ -67,7 +67,8 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/.Xil/Vivado-13916-DESKTOP-7MRF67A/incrSyn
+  set_param xicom.use_bs_reader 1
+  set_param synth.incrementalSynthesisCache C:/Users/hammi/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-7320-DESKTOP-7MRF67A/incrSyn
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
@@ -76,6 +77,7 @@ set rc [catch {
   set_property ip_output_repo C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   add_files -quiet C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/synth_1/Main.dcp
+  read_xdc C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.srcs/constrs_1/new/BCDadder.xdc
   link_design -top Main -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

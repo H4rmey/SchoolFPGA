@@ -16,7 +16,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/.Xil/Vivado-13916-DESKTOP-7MRF67A/incrSyn
+set_param xicom.use_bs_reader 1
+set_param synth.incrementalSynthesisCache C:/Users/hammi/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-7320-DESKTOP-7MRF67A/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
@@ -45,6 +46,9 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.srcs/constrs_1/new/BCDadder.xdc
+set_property used_in_implementation false [get_files C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.srcs/constrs_1/new/BCDadder.xdc]
+
 
 synth_design -top Main -part xc7a35tcpg236-1
 
