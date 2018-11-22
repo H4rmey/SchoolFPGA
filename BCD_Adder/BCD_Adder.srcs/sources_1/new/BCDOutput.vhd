@@ -19,20 +19,20 @@ end BCDOutput;
 architecture Behavioral of BCDOutput is
 begin
     process(clk)
-        variable cnt : integer range 0 to 1000000;
+        variable cnt : integer range 0 to 1000000 := 0;
     begin
         if rising_edge(clk) then
             case (cnt) is
                 when 1 =>
                     segmSelect <= "1110";
                     binOut <= bin_0;
-                when 450000 =>
+                when 250000 =>
                     segmSelect <= "1101";
                     binOut <= bin_1;
                 when 500000 =>
                     segmSelect <= "1011";
                     binOut <= bin_2;
-                when 950000 =>
+                when 750000 =>
                     segmSelect <= "0111";
                     binOut <= bin_3;
                 when 1000000 =>

@@ -14,26 +14,34 @@ end BinToBCD;
 
 architecture Behavioral of BinToBCD is
 begin
-    process(binIn) is
-    variable b0, b1, b2 : std_logic_vector(3 downto 0) := "0000";
-    begin
-        for i in 0 to 8 loop
-            if (b0 >= 5) then
-                b0 := 3 + b0;
-            end if;
-            if (b1 >= 5) then
-                b1 := 3 + b1;
-            end if;
-            if (b2 >= 5) then
-                b2 := 3 + b2;
-            end if;
+process( binIn )
+    variable i : integer;
+    variable binary_shift : STD_LOGIC_VECTOR(20 downto 0);
+begin
+    --initialization
+    binary_shift(20 downto 9) := (others => '0');
+    binary_shift(8 downto 0) := binIn;
+
+    for i in 0 to 8 loop
+        --addition if over column over or equal to 5
+        if(binary_shift(12 downto 9) >= "0101") then
+            binary_shift(12 downto 9) := binary_shift(12 downto 9) + "0011";
+        end if;
+
+        if(binary_shift(16 downto 13) >= "0101") then
+            binary_shift(16 downto 13) := binary_shift(16 downto 13) + "0011";
+        end if;
+        
+        if(binary_shift(20 downto 17) >= "0101") then
+            binary_shift(20 downto 17) := binary_shift(20 downto 17) + "0011";
+        end if;
+
+        --shifting everyting
+        binary_shift := binary_shift(19 downto 0) & '0';
+    end loop;
     
-            b2 := b2(2 downto 0) & b1(3);
-            b1 := b1(2 downto 0) & b0(3);
-            b0 := b0(2 downto 0) & binIn(8-i); 
-        end loop;
-    BCD_0 <= b0;
-    BCD_1 <= b1;
-    BCD_2 <= b2;
-    end process;
+    BCD_0 <= binary_shift(12 downto 9);
+    BCD_1 <= binary_shift(16 downto 13);
+    BCD_2 <= binary_shift(20 downto 17);
+end process ;
 end Behavioral;

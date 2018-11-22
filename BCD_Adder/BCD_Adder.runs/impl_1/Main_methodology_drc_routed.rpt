@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Thu Nov 22 23:16:49 2018
+| Date         : Fri Nov 23 00:19:46 2018
 | Host         : DESKTOP-7MRF67A running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Main_methodology_drc_routed.rpt -pb Main_methodology_drc_routed.pb -rpx Main_methodology_drc_routed.rpx
 | Design       : Main
@@ -23,12 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 31
+             Violations found: 28
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
 | TIMING-17 | Warning  | Non-clocked sequential cell | 28         |
-| TIMING-23 | Warning  | Combinational loop found    | 3          |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -171,21 +170,6 @@ Related violations: <none>
 TIMING-17#28 Warning
 Non-clocked sequential cell  
 The clock pin BCDOut/segmSelect_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-23#1 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between BCDOut/binOut[3]_i_110/I5 and BCDOut/binOut[3]_i_110/O to disable the timing loop
-Related violations: <none>
-
-TIMING-23#2 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between BCDOut/binOut[3]_i_51/I4 and BCDOut/binOut[3]_i_51/O to disable the timing loop
-Related violations: <none>
-
-TIMING-23#3 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between BCDOut/binOut[3]_i_59/I3 and BCDOut/binOut[3]_i_59/O to disable the timing loop
 Related violations: <none>
 
 

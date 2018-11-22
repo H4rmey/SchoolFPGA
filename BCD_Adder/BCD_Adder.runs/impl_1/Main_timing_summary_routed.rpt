@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Thu Nov 22 23:16:50 2018
+| Date         : Fri Nov 23 00:19:47 2018
 | Host         : DESKTOP-7MRF67A running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file Main_timing_summary_routed.rpt -rpx Main_timing_summary_routed.rpx -warn_on_violation
 | Design       : Main
@@ -100,7 +100,7 @@ Table of Contents
 
 9. checking loops
 -----------------
- There are 70 combinational loops in the design. (HIGH)
+ There are 0 combinational loops in the design.
 
 
 10. checking partial_input_delay

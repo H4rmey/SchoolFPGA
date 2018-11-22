@@ -17,7 +17,7 @@ end Main;
 
 architecture Behavioral of Main is
 
-signal sums : std_logic_vector(8 downto 0) := "000000000"; 
+signal sums : std_logic_vector(8 downto 0); 
 signal tempBinair : std_logic_vector(3 downto 0);
 signal inpA : std_logic_vector(7 downto 0) := "00000001";
 signal inpB : std_logic_vector(7 downto 0) := "00000111";   
