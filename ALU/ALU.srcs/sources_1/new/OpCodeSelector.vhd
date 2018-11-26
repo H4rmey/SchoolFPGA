@@ -14,16 +14,15 @@ entity OpCodeSelector is
 end OpCodeSelector;
 
 architecture Behavioral of OpCodeSelector is
-
 begin
     process(btnSelect, btnLeft, btnRight)
         variable sel : STD_LOGIC_VECTOR(3 downto 0);
     begin
-        if (rising_edge(btnRight)) then
+        if (btnRight = '1') then
             sel := sel + '1';
-        elsif (rising_edge(btnLeft)) then
+        elsif (btnLeft = '1') then
             sel := sel - '1';
-        elsif (rising_edge(btnSelect)) then
+        elsif (btnSelect = '1') then
             opOut <= sel;
         end if;
     end process;

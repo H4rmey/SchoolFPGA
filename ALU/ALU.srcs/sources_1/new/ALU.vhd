@@ -7,8 +7,8 @@ entity ALU is
     Port
     (
         A,B : in STD_LOGIC_VECTOR(7 downto 0);
-        Op : in STD_LOGIC_VECTOR(3 downto 0);
-        Res : out STD_LOGIC_VECTOR(7 downto 0);
+        opIn : in STD_LOGIC_VECTOR(3 downto 0);
+        Res : out STD_LOGIC_VECTOR(8 downto 0);
         Cout : out STD_LOGIC;
         Equal : out STD_LOGIC
     );
@@ -19,7 +19,7 @@ begin
     process(A, B)
         variable tRes : STD_LOGIC_VECTOR(8 downto 0);
     begin
-        case Op is
+        case opIn is
             When "0000" => tRes := ('0' & A) + ('0' & B); --"A + B"
             When "0001" => tRes := ('0' & A) - ('0' & B); --"A - B"
             When "0010" => tRes := ('0' & B) + ('0' & A); --"B - A"
@@ -33,12 +33,13 @@ begin
             When "1011" => tRes := '0' & A(0) & A(7 downto 1); --"Rotate A right"
             When "1110" => tRes := "000000000"; --"all zeros"
             When "1111" => tRes := "111111111"; --"all ones"
-
+            when others => tRes := "111000111"; 
+        end case;
             if (A = B) then
                 Equal <= '1';
             end if;
 
-            Res <= tRes(7 downto 0);
+            Res <= tRes(8 downto 0);
             Cout <= tRes(8);
     end process;
 end Behavioral;
