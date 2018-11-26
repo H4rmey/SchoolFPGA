@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Nov 22 00:45:34 2018
+# Process ID: 6812
+# Current directory: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6880 C:\Users\hammi\OneDrive\Documenten\bitbucket\SchoolFPGA\BCD_Adder\BCD_Adder.xpr
+# Log file: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/vivado.log
+# Journal file: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Thu Nov 22 00:46:55 2018] Launched synth_1...
+Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/synth_1/runme.log
+[Thu Nov 22 00:46:55 2018] Launched impl_1...
+Run output will be captured here: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 22 00:52:04 2018...

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/synth_1'
+HD_PWD='C:/Users/hammi/Documents/BitBucket/SchoolFPGA/BCD_Adder/BCD_Adder.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
