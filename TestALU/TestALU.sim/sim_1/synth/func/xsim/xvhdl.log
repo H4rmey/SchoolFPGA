@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/TestALU/TestALU.srcs/sources_1/imports/sources_1/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/TestALU/TestALU.srcs/sources_1/imports/sources_1/imports/Desktop/alu_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU_TB
