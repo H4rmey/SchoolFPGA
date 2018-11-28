@@ -4,20 +4,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.std_logic_arith.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-entity ALU is
-      port
-        (
-            A       : in std_logic_vector(7 downto 0);
-            B       : in std_logic_vector(7 downto 0);
-            Op      : in std_logic_vector(3 downto 0);
+entity alu is
+ Port ( A,B : in STD_LOGIC_VECTOR(7 downto 0);
+        Op : in STD_LOGIC_VECTOR(3 downto 0);
+        Res : out STD_LOGIC_VECTOR(7 downto 0);
+        Cout : out STD_LOGIC;
+        Equal : out STD_LOGIC);
+end alu;
 
-            Res     : out std_logic_vector(7 downto 0);
-            Cout    : out Std_logic;
-            Equal   : out Std_logic
-        );
-end ALU;
-
-architecture Behavioral of ALU is
+architecture Behavioral of alu is
 begin
     process(A, B, Op)
         variable tRes : STD_LOGIC_VECTOR(8 downto 0);
@@ -47,5 +42,4 @@ begin
             Res <= tRes(7 downto 0);
             Cout <= tRes(8);
     end process;
-
 end Behavioral;
