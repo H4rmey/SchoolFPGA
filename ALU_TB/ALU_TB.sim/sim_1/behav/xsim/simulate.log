@@ -1,2 +1,4 @@
 Vivado Simulator 2017.4
 Time resolution is 1 ps
+Note: ALU Finished OK
+Time: 10249 ns  Iteration: 0  Process: /ALU_TB/Check  File: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU_TB/ALU_TB.srcs/sources_1/imports/Desktop/alu_tb.vhd

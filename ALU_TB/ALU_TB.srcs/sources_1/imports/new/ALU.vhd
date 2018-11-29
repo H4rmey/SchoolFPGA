@@ -1,8 +1,8 @@
 
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.std_logic_arith.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+library IEEE;
+use     IEEE.STD_LOGIC_1164.ALL;
+use     IEEE.NUMERIC_STD.ALL;
 
 entity ALU is
       port
@@ -20,31 +20,35 @@ end ALU;
 architecture Behavioral of ALU is
 begin
     process(A, B, Op)
-        variable tRes : STD_LOGIC_VECTOR(8 downto 0);
+        variable tRes : signed(8 downto 0);
+        variable At, Bt : signed(8 downto 0);
     begin
+        At := resize(signed(A), 9);
+        Bt := resize(signed(B), 9);
+        
         case Op is
-            When "0000" => tRes := ('0' & A) + ('0' & B); --"A + B"
-            When "0001" => tRes := ('0' & A) - ('0' & B); --"A - B"
-            When "0010" => tRes := ('0' & B) + ('0' & A); --"B - A"
-            When "0100" => tRes := ('0' & A); --"A"
-            When "0101" => tRes := ('0' & B); --"B"
-            When "0110" => tRes := ('1' & A); --"-A"
-            When "0111" => tRes := ('1' & B); --"-B"
-            When "1000" => tRes := A(7 downto 0) & '0'; --"shift A left"
-            When "1001" => tRes := "00" & A(7 downto 1); --"shift A right"
-            When "1010" => tRes := A(7 downto 0) & A(7); --"Rotate A left"
-            When "1011" => tRes := '0' & A(0) & A(7 downto 1); --"Rotate A right"
+            When "0000" => tRes := At + Bt; --"A + B"
+            When "0001" => tRes := At - Bt; --"A - B"
+            When "0010" => tRes := Bt - At; --"B - A"
+            When "0100" => tRes := At; --"A"
+            When "0101" => tRes := Bt; --"B"
+            When "0110" => tRes := -At; --"-A"
+            When "0111" => tRes := -Bt; --"-B"
+            When "1000" => tRes := At sll 1; --"shift A left"
+            When "1001" => tRes := '0' & (At(7 downto 0) srl 1); --"shift A right"
+            When "1010" => tRes := At rol 1; --"Rotate A left"
+            When "1011" => tRes := '0' & (At(7 downto 0) ror 1); --"Rotate A right"
             When "1110" => tRes := "000000000"; --"all zeros"
             When "1111" => tRes := "111111111"; --"all ones"
-            when others => tRes := "111000111"; --"error"
+            When others => tRes := "---------"; --"error"
         end case;
-            if (A = B) then
+            if (At = Bt) then
                 Equal <= '1';
             else
                 Equal <= '0';
             end if;
 
-            Res <= tRes(7 downto 0);
+            Res <= STD_LOGIC_VECTOR(tRes(7 downto 0));
             Cout <= tRes(8);
     end process;
 

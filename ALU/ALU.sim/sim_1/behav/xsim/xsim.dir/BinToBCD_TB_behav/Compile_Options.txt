@@ -1,0 +1,1 @@
+-wto "7a450efc88ff4c859a64e43d0a9e8dd7" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "BinToBCD_TB_behav" "xil_defaultlib.BinToBCD_TB" -log "elaborate.log" 

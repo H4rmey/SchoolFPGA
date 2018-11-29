@@ -1,43 +1,58 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use ieee.std_logic_arith.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
-entity BinToBCD is
+entity binToBCD is
     Port (
-            binIn : in std_logic_vector(8 downto 0);
-            BCD_0 : out std_logic_vector(3 downto 0);
-            BCD_1 : out std_logic_vector(3 downto 0);
-            BCD_2 : out std_logic_vector(3 downto 0);
-            BCD_3 : out std_logic_vector(3 downto 0)
-        );
-end BinToBCD;
+        bin : in STD_LOGIC_VECTOR (7 downto 0);
+        Cout : in STD_LOGIC;
+        ones : out STD_LOGIC_VECTOR(3 downto 0);
+        tens : out STD_LOGIC_VECTOR(3 downto 0);
+        hundreds : out STD_LOGIC_VECTOR(3 downto 0);
+        minus : out STD_LOGIC_VECTOR(3 downto 0)
+    );
+end binToBCD;
 
-architecture Behavioral of BinToBCD is
+architecture Behavioral of binToBCD is
 begin
-    process(binIn) is
-		variable i : integer;
-		variable b0, b1, b2 : std_logic_vector(3 downto 0) := "0000";
+    process( bin, Cout )
+        variable i : integer;
+        variable binary_shift : STD_LOGIC_VECTOR(19 downto 0);
     begin
+        --initialization
+        binary_shift(19 downto 8) := (others => '0');
+
+        if Cout = '0' then
+            binary_shift(7 downto 0) := bin;
+            minus <= "0000";
+        else
+            binary_shift(7 downto 0) := STD_LOGIC_VECTOR(NOT (signed(bin) - 1));
+            minus <= "1111";
+        end if;
+
+
         for i in 0 to 7 loop
-            if (b0 >= 5) then
-                b0 := 3 + b0;
-            end if;
-            if (b1 >= 5) then
-                b1 := 3 + b1;
-            end if;
-            if (b2 >= 5) then
-                b2 := 3 + b2;
+            --addition if over column over or equal to 5
+            if(binary_shift(11 downto 8) >= "0101") then
+                binary_shift(11 downto 8) := binary_shift(11 downto 8) + "0011";
             end if;
 
-            b2 := b2(2 downto 0) & b1(3);
-            b1 := b1(2 downto 0) & b0(3);
-            b0 := b0(2 downto 0) & binIn(7-i);
+            if(binary_shift(15 downto 12) >= "0101") then
+                binary_shift(15 downto 12) := binary_shift(15 downto 12) + "0011";
+            end if;
+
+            if(binary_shift(19 downto 16) >= "0101") then
+                binary_shift(19 downto 16) := binary_shift(19 downto 16) + "0011";
+            end if;
+
+            --shifting everyting
+            binary_shift := binary_shift(18 downto 0) & '0';
         end loop;
 
-    BCD_0 <= b0;
-    BCD_1 <= b1;
-    BCD_2 <= b2;
-    BCD_3 <= "111" & binIn(8);
-    end process;
-end Behavioral;
+        ones <= binary_shift(11 downto 8);
+        tens <= binary_shift(15 downto 12);
+        hundreds <= binary_shift(19 downto 16);
+    end process ;
+
+end architecture;

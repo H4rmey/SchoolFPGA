@@ -2,11 +2,11 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sun Nov 25 17:39:20 2018
-# Process ID: 16404
+# Start of session at: Wed Nov 28 22:38:02 2018
+# Process ID: 26224
 # Current directory: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.runs/synth_1
-# Command line: vivado.exe -log BinToBCD.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BinToBCD.tcl
-# Log file: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.runs/synth_1/BinToBCD.vds
+# Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+# Log file: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.runs/synth_1/main.vds
 # Journal file: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source BinToBCD.tcl -notrace
+source main.tcl -notrace

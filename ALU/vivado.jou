@@ -1,0 +1,76 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Nov 28 21:56:05 2018
+# Process ID: 3332
+# Current directory: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19668 C:\Users\hammi\OneDrive\Documenten\bitbucket\SchoolFPGA\ALU\ALU.xpr
+# Log file: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/vivado.log
+# Journal file: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210183A38758A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/210183A38758A]
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+synth_design -rtl -name rtl_1
+refresh_design
+update_compile_order -fileset sources_1
+place_ports {btns[0]} L1
+place_ports {btns[1]} P1
+place_ports {btns[2]} N3
+place_ports {btns[3]} P3
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_design
+place_ports {btns[0]} W19
+place_ports {btns[1]} T18
+place_ports {btns[2]} T17
+place_ports {btns[3]} U17
+save_constraints
+place_ports {leds[0]} L1
+place_ports {leds[1]} P1
+place_ports {leds[2]} N3
+place_ports {leds[3]} P3
+set_property IOSTANDARD LVCMOS33 [get_ports [list {inputB[7]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {leds[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {leds[1]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {leds[2]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {leds[3]}]]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1

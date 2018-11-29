@@ -1,0 +1,10 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.srcs/sources_1/new/ALU.vhd,1543429913,vhdl,C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.srcs/sources_1/new/main.vhd,,,alu,,,,,,,,
+C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.srcs/sources_1/new/BinToBCD.vhd,1543440910,vhdl,C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.srcs/sources_1/new/BinToBCD_TB.vhd,,,bintobcd,,,,,,,,
+C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.srcs/sources_1/new/BinToBCD_TB.vhd,1543451456,vhdl,,,,bintobcd_tb,,,,,,,,
+C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.srcs/sources_1/new/MUX.vhd,1543269374,vhdl,C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.srcs/sources_1/new/main.vhd,,,mux,,,,,,,,
+C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.srcs/sources_1/new/ToSeg.vhd,1543271618,vhdl,C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.srcs/sources_1/new/main.vhd,,,toseg,,,,,,,,
+C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/ALU/ALU.srcs/sources_1/new/main.vhd,1543443840,vhdl,,,,main,,,,,,,,
