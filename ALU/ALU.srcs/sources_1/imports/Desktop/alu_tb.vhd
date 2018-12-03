@@ -56,7 +56,7 @@ begin
   UUT: entity WORK.ALU
     port map ( A     => A,
                B     => B,
-               Op    => Op,
+               opIn  => Op,
                Res   => F,
                Cout  => Cout,
                Equal => Equal);
