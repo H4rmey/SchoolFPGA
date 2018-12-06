@@ -1,0 +1,11 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop/WatchStop.srcs/sources_1/new/BinToBCD.vhd,1544107869,vhdl,C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop/WatchStop.srcs/sources_1/new/main.vhd,,,bintobcd,,,,,,,,
+C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop/WatchStop.srcs/sources_1/new/MUX.vhd,1544107750,vhdl,C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop/WatchStop.srcs/sources_1/new/main.vhd,,,mux,,,,,,,,
+C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop/WatchStop.srcs/sources_1/new/State_TB.vhd,1544114679,vhdl,,,,state_tb,,,,,,,,
+C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop/WatchStop.srcs/sources_1/new/Statemachine.vhd,1544114024,vhdl,C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop/WatchStop.srcs/sources_1/new/State_TB.vhd,,,statemachine,,,,,,,,
+C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop/WatchStop.srcs/sources_1/new/ToSeg.vhd,1544107751,vhdl,C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop/WatchStop.srcs/sources_1/new/main.vhd,,,toseg,,,,,,,,
+C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop/WatchStop.srcs/sources_1/new/WatchStop.vhd,1544113553,vhdl,C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop/WatchStop.srcs/sources_1/new/main.vhd,,,watchstop,,,,,,,,
+C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop/WatchStop.srcs/sources_1/new/main.vhd,1544109829,vhdl,,,,main,,,,,,,,

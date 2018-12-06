@@ -1,0 +1,11 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../WatchStop.srcs/sources_1/new/BinToBCD.vhd" \
+"../../../../WatchStop.srcs/sources_1/new/MUX.vhd" \
+"../../../../WatchStop.srcs/sources_1/new/Statemachine.vhd" \
+"../../../../WatchStop.srcs/sources_1/new/ToSeg.vhd" \
+"../../../../WatchStop.srcs/sources_1/new/WatchStop.vhd" \
+"../../../../WatchStop.srcs/sources_1/new/main.vhd" \
+
+# Do not sort compile order
+nosort
