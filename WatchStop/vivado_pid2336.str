@@ -1,0 +1,101 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 2336
+License: Customer
+
+Current time: 	Thu Dec 06 15:06:37 CET 2018
+Time zone: 	Central European Time (Europe/Berlin)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 104 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	hammi
+User home directory: C:/Users/hammi
+User working directory: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.4
+RDI_DATADIR: C:/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/hammi/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/hammi/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/hammi/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop/vivado.log
+Vivado journal file location: 	C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop/vivado.jou
+Engine tmp dir: 	C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop/.Xil/Vivado-2336-DESKTOP-7MRF67A
+
+GUI allocated memory:	180 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 571 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\hammi\OneDrive\Documenten\bitbucket\SchoolFPGA\WatchStop\WatchStop.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// [GUI Memory]: 68 MB (+68695kb) [00:00:05]
+// [Engine Memory]: 483 MB (+355080kb) [00:00:05]
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop/WatchStop.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 72 MB (+1052kb) [00:00:06]
+// [Engine Memory]: 564 MB (+59678kb) [00:00:06]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'. 
+// Project name: WatchStop; location: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/WatchStop; part: xc7a35tcpg236-1
+// [GUI Memory]: 79 MB (+3123kb) [00:00:08]
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 588 MB. GUI used memory: 40 MB. Current time: 12/6/18 3:06:39 PM CET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// [Engine Memory]: 594 MB (+2117kb) [00:00:14]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1); // B (D, cj)
+// [GUI Memory]: 83 MB (+140kb) [00:00:16]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, BinToBCD.vhd]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, BinToBCD.vhd]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, BinToBCD.vhd]", 2, false, false, false, false, false, true); // B (D, cj) - Double Click
+// [GUI Memory]: 92 MB (+5162kb) [00:00:18]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, ToSeg.vhd]", 3, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, ToSeg.vhd]", 3, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, main.vhd]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, main.vhd]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+// [GUI Memory]: 100 MB (+3242kb) [00:00:26]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Statemachine(Behavioral) (Statemachine.vhd)]", 5, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Statemachine(Behavioral) (Statemachine.vhd)]", 5, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, WatchStop(Behavioral) (WatchStop.vhd)]", 6, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, WatchStop(Behavioral) (WatchStop.vhd)]", 6, false, false, false, false, false, true); // B (D, cj) - Double Click
+// [Engine Memory]: 627 MB (+2600kb) [00:00:30]
+// HMemoryUtils.trashcanNow. Engine heap size: 627 MB. GUI used memory: 51 MB. Current time: 12/6/18 3:07:04 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 627 MB. GUI used memory: 51 MB. Current time: 12/6/18 3:37:04 PM CET
