@@ -1,0 +1,71 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Sun Dec  9 15:44:03 2018
+| Host         : DESKTOP-7MRF67A running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
+| Design       : main
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     8 |
+| Unused register locations in slices containing registers |    40 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              88 |           27 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              44 |           14 |
+| Yes          | No                    | No                     |               2 |            1 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              10 |            3 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------------------+--------------------------+---------------------------------------------+------------------+----------------+
+|        Clock Signal        |       Enable Signal      |               Set/Reset Signal              | Slice Load Count | Bel Load Count |
++----------------------------+--------------------------+---------------------------------------------+------------------+----------------+
+|  CLK_Converter/inst/clkOut |                          | VGA_THING/ltOp                              |                1 |              1 |
+|  CLK_Converter/inst/clkOut |                          | VGA_THING/vsync_i_1_n_0                     |                1 |              1 |
+|  CLK_Converter/inst/clkOut | VGA_THING/redOut_i_1_n_0 |                                             |                1 |              2 |
+|  CLK_Converter/inst/clkOut |                          | VGA_THING/sel                               |                4 |             10 |
+|  CLK_Converter/inst/clkOut | VGA_THING/sel            | VGA_THING/clear                             |                3 |             10 |
+|  CLK_Converter/inst/clkOut |                          |                                             |                8 |             20 |
+|  clk_IBUF_BUFG             |                          | ItsASquare/cnt0_inferred__0/i__carry__1_n_1 |                8 |             32 |
+|  clk_IBUF_BUFG             |                          |                                             |               19 |             68 |
++----------------------------+--------------------------+---------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     2 |
+| 2      |                     1 |
+| 10     |                     2 |
+| 16+    |                     3 |
++--------+-----------------------+
+
+
