@@ -57,7 +57,7 @@ begin
                 blueOut <= '1';
             end if;
 
-            if (cnt = second/300) then
+            if (cnt = second/150) then
                 x := x + Add_x;
                 y := y + Add_y;
                 cnt := 0;
@@ -76,5 +76,4 @@ begin
             end if;
         end if;
     end process;
-
 end Behavioral;

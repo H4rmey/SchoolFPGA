@@ -22,18 +22,24 @@ architecture Behavioral of VGA is
     signal vcount : STD_LOGIC_VECTOR(9 downto 0) := (others => '0');
 begin
 process (clk25)
-    constant leftBound  : integer := 144;
-    constant rightBound : integer := 784;
-    constant upperBound : integer := 31;
-    constant lowerBound : integer := 511;
+    --width and height
+    constant screenWidth : integer := 640;
+    constant screenHeight : integer := 480;
 
+    --sync zooi
     constant frontPorch_x : integer := 16;
     constant syncPulse_x : integer := 96;
     constant backPorch_x : integer := 48;
 
     constant frontPorch_y : integer := 10;
     constant syncPulse_y : integer := 2;
-    constant backPorch_y : integer := 33;
+    constant backPorch_y : integer := 29;
+
+    --bound of the screen
+    constant leftBound  : integer := syncPulse_x + backPorch_x;
+    constant rightBound : integer := leftBound + screenWidth;
+    constant upperBound : integer := syncPulse_y + backPorch_y;
+    constant lowerBound : integer := upperBound + screenHeight;
 begin
     if rising_edge(clk25) then
 
@@ -44,15 +50,19 @@ begin
             redOut <= redIn;
             greenOut <= greenIn;
             blueOut <= blueIn;
+        else
+            redOut <= '1';
+            greenOut <= '1';
+            blueOut <= '1';
         end if;
 
-        if (hcount < syncPulse_x) then
+        if (hcount < syncPulse_x+1) then
             hsync <= '0';
         else
             hsync <= '1';
         end if;
 
-        if (vcount < syncPulse_y) then
+        if (vcount < syncPulse_y+1) then
             vsync <= '0';
         else
             vsync <= '1';

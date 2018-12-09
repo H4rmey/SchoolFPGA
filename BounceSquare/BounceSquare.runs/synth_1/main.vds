@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sun Dec  9 15:43:02 2018
-# Process ID: 47676
+# Start of session at: Sun Dec  9 16:52:18 2018
+# Process ID: 51308
 # Current directory: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.runs/synth_1
 # Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
 # Log file: C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.runs/synth_1/main.vds
@@ -15,14 +15,14 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 47392 
+INFO: Helper process launched with PID 45688 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 354.875 ; gain = 98.676
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 355.047 ; gain = 99.203
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'main' [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/new/main.vhd:16]
-INFO: [Synth 8-3491] module 'clkConverter' declared at 'C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.runs/synth_1/.Xil/Vivado-47676-DESKTOP-7MRF67A/realtime/clkConverter_stub.v:5' bound to instance 'CLK_Converter' of component 'clkConverter' [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/new/main.vhd:34]
-INFO: [Synth 8-638] synthesizing module 'clkConverter' [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.runs/synth_1/.Xil/Vivado-47676-DESKTOP-7MRF67A/realtime/clkConverter_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clkConverter' (1#1) [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.runs/synth_1/.Xil/Vivado-47676-DESKTOP-7MRF67A/realtime/clkConverter_stub.v:5]
+INFO: [Synth 8-3491] module 'clkConverter' declared at 'C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.runs/synth_1/.Xil/Vivado-51308-DESKTOP-7MRF67A/realtime/clkConverter_stub.v:5' bound to instance 'CLK_Converter' of component 'clkConverter' [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/new/main.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'clkConverter' [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.runs/synth_1/.Xil/Vivado-51308-DESKTOP-7MRF67A/realtime/clkConverter_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clkConverter' (1#1) [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.runs/synth_1/.Xil/Vivado-51308-DESKTOP-7MRF67A/realtime/clkConverter_stub.v:5]
 INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/imports/Desktop/vga.vhd:20]
 INFO: [Synth 8-256] done synthesizing module 'VGA' (2#1) [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/imports/Desktop/vga.vhd:20]
 INFO: [Synth 8-638] synthesizing module 'SpriteRender' [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/new/SpriteRender.vhd:21]
@@ -31,7 +31,7 @@ WARNING: [Synth 8-6014] Unused sequential element blueOut_reg was removed.  [C:/
 INFO: [Synth 8-256] done synthesizing module 'SpriteRender' (3#1) [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/new/SpriteRender.vhd:21]
 INFO: [Synth 8-256] done synthesizing module 'main' (4#1) [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/new/main.vhd:16]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 407.086 ; gain = 150.887
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 406.691 ; gain = 150.848
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -41,15 +41,15 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 407.086 ; gain = 150.887
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 406.691 ; gain = 150.848
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.runs/synth_1/.Xil/Vivado-47676-DESKTOP-7MRF67A/dcp1/clkConverter_in_context.xdc] for cell 'CLK_Converter'
-Finished Parsing XDC File [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.runs/synth_1/.Xil/Vivado-47676-DESKTOP-7MRF67A/dcp1/clkConverter_in_context.xdc] for cell 'CLK_Converter'
+Parsing XDC File [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.runs/synth_1/.Xil/Vivado-51308-DESKTOP-7MRF67A/dcp1/clkConverter_in_context.xdc] for cell 'CLK_Converter'
+Finished Parsing XDC File [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.runs/synth_1/.Xil/Vivado-51308-DESKTOP-7MRF67A/dcp1/clkConverter_in_context.xdc] for cell 'CLK_Converter'
 Parsing XDC File [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/constrs_1/new/vga_output.xdc]
 Finished Parsing XDC File [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/constrs_1/new/vga_output.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/constrs_1/new/vga_output.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
@@ -59,28 +59,28 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 744.496 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 742.859 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 744.496 ; gain = 488.297
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 742.859 ; gain = 487.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 744.496 ; gain = 488.297
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 742.859 ; gain = 487.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.runs/synth_1/.Xil/Vivado-47676-DESKTOP-7MRF67A/dcp1/clkConverter_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.runs/synth_1/.Xil/Vivado-47676-DESKTOP-7MRF67A/dcp1/clkConverter_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.runs/synth_1/.Xil/Vivado-51308-DESKTOP-7MRF67A/dcp1/clkConverter_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.runs/synth_1/.Xil/Vivado-51308-DESKTOP-7MRF67A/dcp1/clkConverter_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for CLK_Converter. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 744.496 ; gain = 488.297
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 742.859 ; gain = 487.016
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element hcount_reg was removed.  [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/imports/Desktop/vga.vhd:40]
-WARNING: [Synth 8-6014] Unused sequential element vcount_reg was removed.  [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/imports/Desktop/vga.vhd:41]
+WARNING: [Synth 8-6014] Unused sequential element hcount_reg was removed.  [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/imports/Desktop/vga.vhd:46]
+WARNING: [Synth 8-6014] Unused sequential element vcount_reg was removed.  [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/imports/Desktop/vga.vhd:47]
 INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/new/SpriteRender.vhd:50]
 INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/new/SpriteRender.vhd:50]
 INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/new/SpriteRender.vhd:50]
@@ -93,7 +93,7 @@ WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/User
 WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/new/SpriteRender.vhd:50]
 WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/new/SpriteRender.vhd:50]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 744.496 ; gain = 488.297
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 742.859 ; gain = 487.016
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -116,6 +116,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 7     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -130,6 +131,8 @@ Detailed RTL Component Info :
 +---Registers : 
 	               10 Bit    Registers := 4     
 	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
 Module SpriteRender 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -156,12 +159,10 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'VGA_THING/blueOut_reg' into 'VGA_THING/greenOut_reg' [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/imports/Desktop/vga.vhd:46]
-WARNING: [Synth 8-6014] Unused sequential element VGA_THING/blueOut_reg was removed.  [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/imports/Desktop/vga.vhd:46]
 INFO: [Synth 8-5545] ROM "ItsASquare/Add_x" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "ItsASquare/Add_y" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element VGA_THING/hcount_reg was removed.  [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/imports/Desktop/vga.vhd:40]
-WARNING: [Synth 8-6014] Unused sequential element VGA_THING/vcount_reg was removed.  [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/imports/Desktop/vga.vhd:41]
+WARNING: [Synth 8-6014] Unused sequential element VGA_THING/hcount_reg was removed.  [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/imports/Desktop/vga.vhd:46]
+WARNING: [Synth 8-6014] Unused sequential element VGA_THING/vcount_reg was removed.  [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/imports/Desktop/vga.vhd:47]
 WARNING: [Synth 8-6014] Unused sequential element ItsASquare/cnt_reg was removed.  [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/new/SpriteRender.vhd:49]
 WARNING: [Synth 8-6014] Unused sequential element ItsASquare/x_reg was removed.  [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/new/SpriteRender.vhd:50]
 WARNING: [Synth 8-6014] Unused sequential element ItsASquare/y_reg was removed.  [C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.srcs/sources_1/new/SpriteRender.vhd:50]
@@ -229,8 +230,9 @@ INFO: [Synth 8-3886] merging instance 'ItsASquare/Add_x_reg[8]' (FDRE) to 'ItsAS
 INFO: [Synth 8-3886] merging instance 'ItsASquare/Add_x_reg[9]' (FDRE) to 'ItsASquare/Add_x_reg[10]'
 WARNING: [Synth 8-3332] Sequential element (ItsASquare/Add_x_reg[0]) is unused and will be removed from module main.
 WARNING: [Synth 8-3332] Sequential element (ItsASquare/Add_y_reg[0]) is unused and will be removed from module main.
+INFO: [Synth 8-3886] merging instance 'VGA_THING/blueOut_reg' (FD) to 'VGA_THING/greenOut_reg'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 744.496 ; gain = 488.297
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 742.859 ; gain = 487.016
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -244,13 +246,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'CLK_Converter/clkOut' to pin 'CLK_Converter/bbstub_clkOut/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 744.496 ; gain = 488.297
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 742.859 ; gain = 487.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 761.082 ; gain = 504.883
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 760.004 ; gain = 504.160
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -262,7 +264,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 762.504 ; gain = 506.305
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 761.414 ; gain = 505.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -286,7 +288,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 762.504 ; gain = 506.305
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 761.414 ; gain = 505.570
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -299,7 +301,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 762.504 ; gain = 506.305
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 761.414 ; gain = 505.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -311,25 +313,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 762.504 ; gain = 506.305
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 761.414 ; gain = 505.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 762.504 ; gain = 506.305
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 761.414 ; gain = 505.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 762.504 ; gain = 506.305
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 761.414 ; gain = 505.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 762.504 ; gain = 506.305
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 761.414 ; gain = 505.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -350,10 +352,10 @@ Report Cell Usage:
 |2     |CARRY4       |    83|
 |3     |LUT1         |     7|
 |4     |LUT2         |    13|
-|5     |LUT3         |   167|
-|6     |LUT4         |    23|
+|5     |LUT3         |   166|
+|6     |LUT4         |    22|
 |7     |LUT5         |    44|
-|8     |LUT6         |    20|
+|8     |LUT6         |    23|
 |9     |FDRE         |   144|
 |10    |OBUF         |     5|
 +------+-------------+------+
@@ -362,16 +364,16 @@ Report Instance Areas:
 +------+-------------+-------------+------+
 |      |Instance     |Module       |Cells |
 +------+-------------+-------------+------+
-|1     |top          |             |   507|
+|1     |top          |             |   508|
 |2     |  ItsASquare |SpriteRender |   417|
-|3     |  VGA_THING  |VGA          |    84|
+|3     |  VGA_THING  |VGA          |    85|
 +------+-------------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 762.504 ; gain = 506.305
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 761.414 ; gain = 505.570
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 762.504 ; gain = 168.895
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 762.504 ; gain = 506.305
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 761.414 ; gain = 169.402
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 761.414 ; gain = 505.570
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 83 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -382,10 +384,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-98 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+98 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 762.504 ; gain = 517.777
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 761.414 ; gain = 517.035
 INFO: [Common 17-1381] The checkpoint 'C:/Users/hammi/OneDrive/Documenten/bitbucket/SchoolFPGA/BounceSquare/BounceSquare.runs/synth_1/main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 762.504 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Dec  9 15:43:33 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 761.414 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  9 16:52:49 2018...
