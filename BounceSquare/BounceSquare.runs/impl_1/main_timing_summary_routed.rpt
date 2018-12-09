@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Sun Dec  9 16:53:36 2018
+| Date         : Sun Dec  9 17:21:58 2018
 | Host         : DESKTOP-7MRF67A running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file main_timing_summary_routed.rpt -rpx main_timing_summary_routed.rpx -warn_on_violation
 | Design       : main
@@ -126,7 +126,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-     35.173        0.000                      0                   75        0.217        0.000                      0                   75        3.000        0.000                       0                    51  
+     35.358        0.000                      0                   75        0.173        0.000                      0                   75        3.000        0.000                       0                    51  
 
 
 All user specified timing constraints are met.
@@ -152,7 +152,7 @@ CLK_Converter/inst/clkIn  {0.000 5.000}      10.000          100.000
 Clock                         WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----                         -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
 CLK_Converter/inst/clkIn                                                                                                                                                    3.000        0.000                       0                     1  
-  clkOut_clkConverter          35.173        0.000                      0                   75        0.217        0.000                      0                   75       19.500        0.000                       0                    47  
+  clkOut_clkConverter          35.358        0.000                      0                   75        0.173        0.000                      0                   75       19.500        0.000                       0                    47  
   clkfbout_clkConverter                                                                                                                                                     7.845        0.000                       0                     3  
 
 
@@ -211,28 +211,28 @@ High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000 
 From Clock:  clkOut_clkConverter
   To Clock:  clkOut_clkConverter
 
-Setup :            0  Failing Endpoints,  Worst Slack       35.173ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.217ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack       35.358ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.173ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack       19.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             35.173ns  (required time - arrival time)
-  Source:                 VGA_THING/vcount_reg[4]/C
+Slack (MET) :             35.358ns  (required time - arrival time)
+  Source:                 VGA_THING/vcount_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            VGA_THING/greenOut_reg/D
+  Destination:            VGA_THING/greenOut_reg_lopt_replica/D
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clkOut_clkConverter
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clkOut_clkConverter rise@40.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        4.638ns  (logic 1.267ns (27.318%)  route 3.371ns (72.682%))
-  Logic Levels:           3  (LUT5=2 LUT6=1)
-  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+  Data Path Delay:        4.169ns  (logic 1.087ns (26.072%)  route 3.082ns (73.928%))
+  Logic Levels:           3  (LUT4=1 LUT5=2)
+  Clock Path Skew:        -0.107ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    1.520ns = ( 41.520 - 40.000 ) 
-    Source Clock Delay      (SCD):    1.639ns
-    Clock Pessimism Removal (CPR):    0.094ns
+    Source Clock Delay      (SCD):    1.627ns
+    Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.182ns
@@ -248,17 +248,79 @@ Slack (MET) :             35.173ns  (required time - arrival time)
                                                      -3.333    -1.757 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -0.096    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.639     1.639    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[4]/C
+                         net (fo=45, routed)          1.627     1.627    VGA_THING/CLK
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X1Y47          FDRE (Prop_fdre_C_Q)         0.456     2.095 r  VGA_THING/vcount_reg[4]/Q
-                         net (fo=6, routed)           1.280     3.375    VGA_THING/vcount_reg__0[4]
-    SLICE_X0Y47          LUT5 (Prop_lut5_I4_O)        0.152     3.527 f  VGA_THING/redOut_i_4/O
-                         net (fo=7, routed)           0.778     4.305    VGA_THING/redOut_i_4_n_0
-    SLICE_X1Y47          LUT5 (Prop_lut5_I3_O)        0.327     4.632 r  VGA_THING/redOut_i_2/O
-                         net (fo=2, routed)           0.520     5.152    VGA_THING/redOut_i_2_n_0
-    SLICE_X0Y47          LUT6 (Prop_lut6_I0_O)        0.332     5.484 r  VGA_THING/greenOut_i_1__0/O
-                         net (fo=2, routed)           0.794     6.277    VGA_THING/greenOut_i_1__0_n_0
+    SLICE_X3Y50          FDRE (Prop_fdre_C_Q)         0.456     2.083 f  VGA_THING/vcount_reg[0]/Q
+                         net (fo=10, routed)          1.029     3.112    VGA_THING/vcount_reg__0[0]
+    SLICE_X3Y50          LUT5 (Prop_lut5_I2_O)        0.154     3.266 r  VGA_THING/vcount[9]_i_4/O
+                         net (fo=5, routed)           0.978     4.243    VGA_THING/vcount[9]_i_4_n_0
+    SLICE_X1Y51          LUT5 (Prop_lut5_I0_O)        0.327     4.570 r  VGA_THING/redOut_i_3/O
+                         net (fo=2, routed)           0.433     5.003    VGA_THING/redOut_i_3_n_0
+    SLICE_X1Y51          LUT4 (Prop_lut4_I3_O)        0.150     5.153 r  VGA_THING/greenOut_i_1/O
+                         net (fo=2, routed)           0.643     5.796    VGA_THING/greenOut_i_1_n_0
+    SLICE_X0Y48          FDRE                                         r  VGA_THING/greenOut_reg_lopt_replica/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clkOut_clkConverter rise edge)
+                                                     40.000    40.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000    40.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         1.457    41.457    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.129    38.328 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    39.909    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          1.520    41.520    VGA_THING/CLK
+    SLICE_X0Y48          FDRE                                         r  VGA_THING/greenOut_reg_lopt_replica/C
+                         clock pessimism              0.000    41.520    
+                         clock uncertainty           -0.098    41.423    
+    SLICE_X0Y48          FDRE (Setup_fdre_C_D)       -0.269    41.154    VGA_THING/greenOut_reg_lopt_replica
+  -------------------------------------------------------------------
+                         required time                         41.154    
+                         arrival time                          -5.796    
+  -------------------------------------------------------------------
+                         slack                                 35.358    
+
+Slack (MET) :             35.459ns  (required time - arrival time)
+  Source:                 VGA_THING/vcount_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            VGA_THING/greenOut_reg/D
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clkOut_clkConverter
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            40.000ns  (clkOut_clkConverter rise@40.000ns - clkOut_clkConverter rise@0.000ns)
+  Data Path Delay:        4.068ns  (logic 1.087ns (26.723%)  route 2.981ns (73.277%))
+  Logic Levels:           3  (LUT4=1 LUT5=2)
+  Clock Path Skew:        -0.107ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.520ns = ( 41.520 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.627ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkOut_clkConverter rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         1.575     1.575    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.333    -1.757 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -0.096    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          1.627     1.627    VGA_THING/CLK
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y50          FDRE (Prop_fdre_C_Q)         0.456     2.083 f  VGA_THING/vcount_reg[0]/Q
+                         net (fo=10, routed)          1.029     3.112    VGA_THING/vcount_reg__0[0]
+    SLICE_X3Y50          LUT5 (Prop_lut5_I2_O)        0.154     3.266 r  VGA_THING/vcount[9]_i_4/O
+                         net (fo=5, routed)           0.978     4.243    VGA_THING/vcount[9]_i_4_n_0
+    SLICE_X1Y51          LUT5 (Prop_lut5_I0_O)        0.327     4.570 r  VGA_THING/redOut_i_3/O
+                         net (fo=2, routed)           0.433     5.003    VGA_THING/redOut_i_3_n_0
+    SLICE_X1Y51          LUT4 (Prop_lut4_I3_O)        0.150     5.153 r  VGA_THING/greenOut_i_1/O
+                         net (fo=2, routed)           0.541     5.695    VGA_THING/greenOut_i_1_n_0
     SLICE_X0Y49          FDRE                                         r  VGA_THING/greenOut_reg/D
   -------------------------------------------------------------------    -------------------
 
@@ -272,29 +334,29 @@ Slack (MET) :             35.173ns  (required time - arrival time)
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  CLK_Converter/inst/clkout1_buf/O
                          net (fo=45, routed)          1.520    41.520    VGA_THING/CLK
     SLICE_X0Y49          FDRE                                         r  VGA_THING/greenOut_reg/C
-                         clock pessimism              0.094    41.614    
-                         clock uncertainty           -0.098    41.517    
-    SLICE_X0Y49          FDRE (Setup_fdre_C_D)       -0.067    41.450    VGA_THING/greenOut_reg
+                         clock pessimism              0.000    41.520    
+                         clock uncertainty           -0.098    41.423    
+    SLICE_X0Y49          FDRE (Setup_fdre_C_D)       -0.269    41.154    VGA_THING/greenOut_reg
   -------------------------------------------------------------------
-                         required time                         41.450    
-                         arrival time                          -6.277    
+                         required time                         41.154    
+                         arrival time                          -5.695    
   -------------------------------------------------------------------
-                         slack                                 35.173    
+                         slack                                 35.459    
 
-Slack (MET) :             35.324ns  (required time - arrival time)
-  Source:                 VGA_THING/vcount_reg[4]/C
+Slack (MET) :             35.744ns  (required time - arrival time)
+  Source:                 VGA_THING/vcount_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            VGA_THING/greenOut_reg_lopt_replica/D
+  Destination:            VGA_THING/redOut_reg/D
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clkOut_clkConverter
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clkOut_clkConverter rise@40.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        4.486ns  (logic 1.267ns (28.245%)  route 3.219ns (71.755%))
-  Logic Levels:           3  (LUT5=2 LUT6=1)
-  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.519ns = ( 41.519 - 40.000 ) 
-    Source Clock Delay      (SCD):    1.639ns
-    Clock Pessimism Removal (CPR):    0.094ns
+  Data Path Delay:        3.985ns  (logic 1.061ns (26.625%)  route 2.924ns (73.375%))
+  Logic Levels:           3  (LUT4=1 LUT5=2)
+  Clock Path Skew:        -0.107ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.520ns = ( 41.520 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.627ns
+    Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.182ns
@@ -310,18 +372,18 @@ Slack (MET) :             35.324ns  (required time - arrival time)
                                                      -3.333    -1.757 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -0.096    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.639     1.639    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[4]/C
+                         net (fo=45, routed)          1.627     1.627    VGA_THING/CLK
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X1Y47          FDRE (Prop_fdre_C_Q)         0.456     2.095 r  VGA_THING/vcount_reg[4]/Q
-                         net (fo=6, routed)           1.280     3.375    VGA_THING/vcount_reg__0[4]
-    SLICE_X0Y47          LUT5 (Prop_lut5_I4_O)        0.152     3.527 f  VGA_THING/redOut_i_4/O
-                         net (fo=7, routed)           0.778     4.305    VGA_THING/redOut_i_4_n_0
-    SLICE_X1Y47          LUT5 (Prop_lut5_I3_O)        0.327     4.632 r  VGA_THING/redOut_i_2/O
-                         net (fo=2, routed)           0.520     5.152    VGA_THING/redOut_i_2_n_0
-    SLICE_X0Y47          LUT6 (Prop_lut6_I0_O)        0.332     5.484 r  VGA_THING/greenOut_i_1__0/O
-                         net (fo=2, routed)           0.641     6.125    VGA_THING/greenOut_i_1__0_n_0
-    SLICE_X0Y44          FDRE                                         r  VGA_THING/greenOut_reg_lopt_replica/D
+    SLICE_X3Y50          FDRE (Prop_fdre_C_Q)         0.456     2.083 f  VGA_THING/vcount_reg[0]/Q
+                         net (fo=10, routed)          1.029     3.112    VGA_THING/vcount_reg__0[0]
+    SLICE_X3Y50          LUT5 (Prop_lut5_I2_O)        0.154     3.266 r  VGA_THING/vcount[9]_i_4/O
+                         net (fo=5, routed)           0.978     4.243    VGA_THING/vcount[9]_i_4_n_0
+    SLICE_X1Y51          LUT5 (Prop_lut5_I0_O)        0.327     4.570 r  VGA_THING/redOut_i_3/O
+                         net (fo=2, routed)           0.433     5.003    VGA_THING/redOut_i_3_n_0
+    SLICE_X1Y51          LUT4 (Prop_lut4_I3_O)        0.124     5.127 r  VGA_THING/redOut_i_1/O
+                         net (fo=1, routed)           0.485     5.612    VGA_THING/redOut_i_1_n_0
+    SLICE_X0Y47          FDRE                                         r  VGA_THING/redOut_reg/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clkOut_clkConverter rise edge)
@@ -332,31 +394,31 @@ Slack (MET) :             35.324ns  (required time - arrival time)
                                                      -3.129    38.328 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581    39.909    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.519    41.519    VGA_THING/CLK
-    SLICE_X0Y44          FDRE                                         r  VGA_THING/greenOut_reg_lopt_replica/C
-                         clock pessimism              0.094    41.613    
-                         clock uncertainty           -0.098    41.516    
-    SLICE_X0Y44          FDRE (Setup_fdre_C_D)       -0.067    41.449    VGA_THING/greenOut_reg_lopt_replica
+                         net (fo=45, routed)          1.520    41.520    VGA_THING/CLK
+    SLICE_X0Y47          FDRE                                         r  VGA_THING/redOut_reg/C
+                         clock pessimism              0.000    41.520    
+                         clock uncertainty           -0.098    41.423    
+    SLICE_X0Y47          FDRE (Setup_fdre_C_D)       -0.067    41.356    VGA_THING/redOut_reg
   -------------------------------------------------------------------
-                         required time                         41.449    
-                         arrival time                          -6.125    
+                         required time                         41.356    
+                         arrival time                          -5.612    
   -------------------------------------------------------------------
-                         slack                                 35.324    
+                         slack                                 35.744    
 
-Slack (MET) :             35.905ns  (required time - arrival time)
-  Source:                 VGA_THING/vcount_reg[4]/C
+Slack (MET) :             35.875ns  (required time - arrival time)
+  Source:                 VGA_THING/vcount_reg[7]/C
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            VGA_THING/vcount_reg[0]/R
+  Destination:            VGA_THING/vsync_reg/R
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clkOut_clkConverter
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clkOut_clkConverter rise@40.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        3.447ns  (logic 0.704ns (20.421%)  route 2.743ns (79.579%))
-  Logic Levels:           2  (LUT5=1 LUT6=1)
-  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+  Data Path Delay:        3.490ns  (logic 0.840ns (24.066%)  route 2.650ns (75.934%))
+  Logic Levels:           2  (LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.108ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    1.519ns = ( 41.519 - 40.000 ) 
-    Source Clock Delay      (SCD):    1.639ns
-    Clock Pessimism Removal (CPR):    0.094ns
+    Source Clock Delay      (SCD):    1.627ns
+    Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.182ns
@@ -372,16 +434,16 @@ Slack (MET) :             35.905ns  (required time - arrival time)
                                                      -3.333    -1.757 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -0.096    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.639     1.639    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[4]/C
+                         net (fo=45, routed)          1.627     1.627    VGA_THING/CLK
+    SLICE_X1Y51          FDRE                                         r  VGA_THING/vcount_reg[7]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X1Y47          FDRE (Prop_fdre_C_Q)         0.456     2.095 f  VGA_THING/vcount_reg[4]/Q
-                         net (fo=6, routed)           1.581     3.676    VGA_THING/vcount_reg__0[4]
-    SLICE_X2Y47          LUT6 (Prop_lut6_I0_O)        0.124     3.800 f  VGA_THING/vcount[9]_i_3/O
-                         net (fo=1, routed)           0.670     4.470    VGA_THING/vcount[9]_i_3_n_0
-    SLICE_X2Y47          LUT5 (Prop_lut5_I4_O)        0.124     4.594 r  VGA_THING/vcount[9]_i_1/O
-                         net (fo=10, routed)          0.492     5.087    VGA_THING/clear
-    SLICE_X2Y46          FDRE                                         r  VGA_THING/vcount_reg[0]/R
+    SLICE_X1Y51          FDRE (Prop_fdre_C_Q)         0.419     2.046 f  VGA_THING/vcount_reg[7]/Q
+                         net (fo=7, routed)           1.461     3.507    VGA_THING/vcount_reg__0[7]
+    SLICE_X3Y52          LUT4 (Prop_lut4_I3_O)        0.297     3.804 f  VGA_THING/vsync_i_3/O
+                         net (fo=1, routed)           0.636     4.440    VGA_THING/vsync_i_3_n_0
+    SLICE_X3Y51          LUT6 (Prop_lut6_I5_O)        0.124     4.564 r  VGA_THING/vsync_i_1/O
+                         net (fo=1, routed)           0.554     5.117    VGA_THING/vsync_i_1_n_0
+    SLICE_X1Y46          FDRE                                         r  VGA_THING/vsync_reg/R
   -------------------------------------------------------------------    -------------------
 
                          (clock clkOut_clkConverter rise edge)
@@ -393,17 +455,77 @@ Slack (MET) :             35.905ns  (required time - arrival time)
                          net (fo=1, routed)           1.581    39.909    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  CLK_Converter/inst/clkout1_buf/O
                          net (fo=45, routed)          1.519    41.519    VGA_THING/CLK
-    SLICE_X2Y46          FDRE                                         r  VGA_THING/vcount_reg[0]/C
-                         clock pessimism              0.094    41.613    
-                         clock uncertainty           -0.098    41.516    
-    SLICE_X2Y46          FDRE (Setup_fdre_C_R)       -0.524    40.992    VGA_THING/vcount_reg[0]
+    SLICE_X1Y46          FDRE                                         r  VGA_THING/vsync_reg/C
+                         clock pessimism              0.000    41.519    
+                         clock uncertainty           -0.098    41.422    
+    SLICE_X1Y46          FDRE (Setup_fdre_C_R)       -0.429    40.993    VGA_THING/vsync_reg
   -------------------------------------------------------------------
-                         required time                         40.992    
-                         arrival time                          -5.087    
+                         required time                         40.993    
+                         arrival time                          -5.117    
   -------------------------------------------------------------------
-                         slack                                 35.905    
+                         slack                                 35.875    
 
-Slack (MET) :             35.905ns  (required time - arrival time)
+Slack (MET) :             35.987ns  (required time - arrival time)
+  Source:                 VGA_THING/vcount_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            VGA_THING/vcount_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clkOut_clkConverter
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            40.000ns  (clkOut_clkConverter rise@40.000ns - clkOut_clkConverter rise@0.000ns)
+  Data Path Delay:        3.615ns  (logic 0.965ns (26.693%)  route 2.650ns (73.307%))
+  Logic Levels:           2  (LUT5=2)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.510ns = ( 41.510 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.627ns
+    Clock Pessimism Removal (CPR):    0.092ns
+  Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkOut_clkConverter rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         1.575     1.575    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.333    -1.757 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -0.096    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          1.627     1.627    VGA_THING/CLK
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y50          FDRE (Prop_fdre_C_Q)         0.456     2.083 f  VGA_THING/vcount_reg[0]/Q
+                         net (fo=10, routed)          1.029     3.112    VGA_THING/vcount_reg__0[0]
+    SLICE_X3Y50          LUT5 (Prop_lut5_I2_O)        0.154     3.266 r  VGA_THING/vcount[9]_i_4/O
+                         net (fo=5, routed)           0.978     4.243    VGA_THING/vcount[9]_i_4_n_0
+    SLICE_X1Y51          LUT5 (Prop_lut5_I0_O)        0.355     4.598 r  VGA_THING/vcount[8]_i_1/O
+                         net (fo=1, routed)           0.644     5.242    VGA_THING/plusOp__0[8]
+    SLICE_X1Y51          FDRE                                         r  VGA_THING/vcount_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clkOut_clkConverter rise edge)
+                                                     40.000    40.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000    40.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         1.457    41.457    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.129    38.328 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    39.909    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          1.510    41.510    VGA_THING/CLK
+    SLICE_X1Y51          FDRE                                         r  VGA_THING/vcount_reg[8]/C
+                         clock pessimism              0.092    41.602    
+                         clock uncertainty           -0.098    41.504    
+    SLICE_X1Y51          FDRE (Setup_fdre_C_D)       -0.275    41.229    VGA_THING/vcount_reg[8]
+  -------------------------------------------------------------------
+                         required time                         41.229    
+                         arrival time                          -5.242    
+  -------------------------------------------------------------------
+                         slack                                 35.987    
+
+Slack (MET) :             36.268ns  (required time - arrival time)
   Source:                 VGA_THING/vcount_reg[4]/C
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
   Destination:            VGA_THING/vcount_reg[1]/R
@@ -411,12 +533,12 @@ Slack (MET) :             35.905ns  (required time - arrival time)
   Path Group:             clkOut_clkConverter
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clkOut_clkConverter rise@40.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        3.447ns  (logic 0.704ns (20.421%)  route 2.743ns (79.579%))
+  Data Path Delay:        3.088ns  (logic 0.704ns (22.798%)  route 2.384ns (77.202%))
   Logic Levels:           2  (LUT5=1 LUT6=1)
-  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.519ns = ( 41.519 - 40.000 ) 
-    Source Clock Delay      (SCD):    1.639ns
-    Clock Pessimism Removal (CPR):    0.094ns
+  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.510ns = ( 41.510 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.627ns
+    Clock Pessimism Removal (CPR):    0.095ns
   Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.182ns
@@ -432,16 +554,16 @@ Slack (MET) :             35.905ns  (required time - arrival time)
                                                      -3.333    -1.757 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -0.096    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.639     1.639    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[4]/C
+                         net (fo=45, routed)          1.627     1.627    VGA_THING/CLK
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[4]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X1Y47          FDRE (Prop_fdre_C_Q)         0.456     2.095 f  VGA_THING/vcount_reg[4]/Q
-                         net (fo=6, routed)           1.581     3.676    VGA_THING/vcount_reg__0[4]
-    SLICE_X2Y47          LUT6 (Prop_lut6_I0_O)        0.124     3.800 f  VGA_THING/vcount[9]_i_3/O
-                         net (fo=1, routed)           0.670     4.470    VGA_THING/vcount[9]_i_3_n_0
-    SLICE_X2Y47          LUT5 (Prop_lut5_I4_O)        0.124     4.594 r  VGA_THING/vcount[9]_i_1/O
-                         net (fo=10, routed)          0.492     5.087    VGA_THING/clear
-    SLICE_X2Y46          FDRE                                         r  VGA_THING/vcount_reg[1]/R
+    SLICE_X3Y50          FDRE (Prop_fdre_C_Q)         0.456     2.083 f  VGA_THING/vcount_reg[4]/Q
+                         net (fo=6, routed)           1.017     3.100    VGA_THING/vcount_reg__0[4]
+    SLICE_X3Y51          LUT6 (Prop_lut6_I4_O)        0.124     3.224 r  VGA_THING/vcount[9]_i_3/O
+                         net (fo=1, routed)           0.806     4.030    VGA_THING/vcount[9]_i_3_n_0
+    SLICE_X3Y52          LUT5 (Prop_lut5_I0_O)        0.124     4.154 r  VGA_THING/vcount[9]_i_1/O
+                         net (fo=10, routed)          0.561     4.715    VGA_THING/clear
+    SLICE_X2Y50          FDRE                                         r  VGA_THING/vcount_reg[1]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock clkOut_clkConverter rise edge)
@@ -452,18 +574,78 @@ Slack (MET) :             35.905ns  (required time - arrival time)
                                                      -3.129    38.328 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581    39.909    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.519    41.519    VGA_THING/CLK
-    SLICE_X2Y46          FDRE                                         r  VGA_THING/vcount_reg[1]/C
-                         clock pessimism              0.094    41.613    
-                         clock uncertainty           -0.098    41.516    
-    SLICE_X2Y46          FDRE (Setup_fdre_C_R)       -0.524    40.992    VGA_THING/vcount_reg[1]
+                         net (fo=45, routed)          1.510    41.510    VGA_THING/CLK
+    SLICE_X2Y50          FDRE                                         r  VGA_THING/vcount_reg[1]/C
+                         clock pessimism              0.095    41.605    
+                         clock uncertainty           -0.098    41.507    
+    SLICE_X2Y50          FDRE (Setup_fdre_C_R)       -0.524    40.983    VGA_THING/vcount_reg[1]
   -------------------------------------------------------------------
-                         required time                         40.992    
-                         arrival time                          -5.087    
+                         required time                         40.983    
+                         arrival time                          -4.715    
   -------------------------------------------------------------------
-                         slack                                 35.905    
+                         slack                                 36.268    
 
-Slack (MET) :             35.905ns  (required time - arrival time)
+Slack (MET) :             36.385ns  (required time - arrival time)
+  Source:                 VGA_THING/vcount_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            VGA_THING/vcount_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clkOut_clkConverter
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            40.000ns  (clkOut_clkConverter rise@40.000ns - clkOut_clkConverter rise@0.000ns)
+  Data Path Delay:        3.088ns  (logic 0.704ns (22.798%)  route 2.384ns (77.202%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.510ns = ( 41.510 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.627ns
+    Clock Pessimism Removal (CPR):    0.117ns
+  Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkOut_clkConverter rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         1.575     1.575    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.333    -1.757 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -0.096    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          1.627     1.627    VGA_THING/CLK
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y50          FDRE (Prop_fdre_C_Q)         0.456     2.083 f  VGA_THING/vcount_reg[4]/Q
+                         net (fo=6, routed)           1.017     3.100    VGA_THING/vcount_reg__0[4]
+    SLICE_X3Y51          LUT6 (Prop_lut6_I4_O)        0.124     3.224 r  VGA_THING/vcount[9]_i_3/O
+                         net (fo=1, routed)           0.806     4.030    VGA_THING/vcount[9]_i_3_n_0
+    SLICE_X3Y52          LUT5 (Prop_lut5_I0_O)        0.124     4.154 r  VGA_THING/vcount[9]_i_1/O
+                         net (fo=10, routed)          0.561     4.715    VGA_THING/clear
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clkOut_clkConverter rise edge)
+                                                     40.000    40.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000    40.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         1.457    41.457    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.129    38.328 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    39.909    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          1.510    41.510    VGA_THING/CLK
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[0]/C
+                         clock pessimism              0.117    41.627    
+                         clock uncertainty           -0.098    41.529    
+    SLICE_X3Y50          FDRE (Setup_fdre_C_R)       -0.429    41.100    VGA_THING/vcount_reg[0]
+  -------------------------------------------------------------------
+                         required time                         41.100    
+                         arrival time                          -4.715    
+  -------------------------------------------------------------------
+                         slack                                 36.385    
+
+Slack (MET) :             36.385ns  (required time - arrival time)
   Source:                 VGA_THING/vcount_reg[4]/C
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
   Destination:            VGA_THING/vcount_reg[2]/R
@@ -471,12 +653,12 @@ Slack (MET) :             35.905ns  (required time - arrival time)
   Path Group:             clkOut_clkConverter
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clkOut_clkConverter rise@40.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        3.447ns  (logic 0.704ns (20.421%)  route 2.743ns (79.579%))
+  Data Path Delay:        3.088ns  (logic 0.704ns (22.798%)  route 2.384ns (77.202%))
   Logic Levels:           2  (LUT5=1 LUT6=1)
-  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.519ns = ( 41.519 - 40.000 ) 
-    Source Clock Delay      (SCD):    1.639ns
-    Clock Pessimism Removal (CPR):    0.094ns
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.510ns = ( 41.510 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.627ns
+    Clock Pessimism Removal (CPR):    0.117ns
   Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.182ns
@@ -492,16 +674,16 @@ Slack (MET) :             35.905ns  (required time - arrival time)
                                                      -3.333    -1.757 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -0.096    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.639     1.639    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[4]/C
+                         net (fo=45, routed)          1.627     1.627    VGA_THING/CLK
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[4]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X1Y47          FDRE (Prop_fdre_C_Q)         0.456     2.095 f  VGA_THING/vcount_reg[4]/Q
-                         net (fo=6, routed)           1.581     3.676    VGA_THING/vcount_reg__0[4]
-    SLICE_X2Y47          LUT6 (Prop_lut6_I0_O)        0.124     3.800 f  VGA_THING/vcount[9]_i_3/O
-                         net (fo=1, routed)           0.670     4.470    VGA_THING/vcount[9]_i_3_n_0
-    SLICE_X2Y47          LUT5 (Prop_lut5_I4_O)        0.124     4.594 r  VGA_THING/vcount[9]_i_1/O
-                         net (fo=10, routed)          0.492     5.087    VGA_THING/clear
-    SLICE_X2Y46          FDRE                                         r  VGA_THING/vcount_reg[2]/R
+    SLICE_X3Y50          FDRE (Prop_fdre_C_Q)         0.456     2.083 f  VGA_THING/vcount_reg[4]/Q
+                         net (fo=6, routed)           1.017     3.100    VGA_THING/vcount_reg__0[4]
+    SLICE_X3Y51          LUT6 (Prop_lut6_I4_O)        0.124     3.224 r  VGA_THING/vcount[9]_i_3/O
+                         net (fo=1, routed)           0.806     4.030    VGA_THING/vcount[9]_i_3_n_0
+    SLICE_X3Y52          LUT5 (Prop_lut5_I0_O)        0.124     4.154 r  VGA_THING/vcount[9]_i_1/O
+                         net (fo=10, routed)          0.561     4.715    VGA_THING/clear
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[2]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock clkOut_clkConverter rise edge)
@@ -512,18 +694,18 @@ Slack (MET) :             35.905ns  (required time - arrival time)
                                                      -3.129    38.328 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581    39.909    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.519    41.519    VGA_THING/CLK
-    SLICE_X2Y46          FDRE                                         r  VGA_THING/vcount_reg[2]/C
-                         clock pessimism              0.094    41.613    
-                         clock uncertainty           -0.098    41.516    
-    SLICE_X2Y46          FDRE (Setup_fdre_C_R)       -0.524    40.992    VGA_THING/vcount_reg[2]
+                         net (fo=45, routed)          1.510    41.510    VGA_THING/CLK
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[2]/C
+                         clock pessimism              0.117    41.627    
+                         clock uncertainty           -0.098    41.529    
+    SLICE_X3Y50          FDRE (Setup_fdre_C_R)       -0.429    41.100    VGA_THING/vcount_reg[2]
   -------------------------------------------------------------------
-                         required time                         40.992    
-                         arrival time                          -5.087    
+                         required time                         41.100    
+                         arrival time                          -4.715    
   -------------------------------------------------------------------
-                         slack                                 35.905    
+                         slack                                 36.385    
 
-Slack (MET) :             35.905ns  (required time - arrival time)
+Slack (MET) :             36.385ns  (required time - arrival time)
   Source:                 VGA_THING/vcount_reg[4]/C
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
   Destination:            VGA_THING/vcount_reg[3]/R
@@ -531,12 +713,12 @@ Slack (MET) :             35.905ns  (required time - arrival time)
   Path Group:             clkOut_clkConverter
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clkOut_clkConverter rise@40.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        3.447ns  (logic 0.704ns (20.421%)  route 2.743ns (79.579%))
+  Data Path Delay:        3.088ns  (logic 0.704ns (22.798%)  route 2.384ns (77.202%))
   Logic Levels:           2  (LUT5=1 LUT6=1)
-  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.519ns = ( 41.519 - 40.000 ) 
-    Source Clock Delay      (SCD):    1.639ns
-    Clock Pessimism Removal (CPR):    0.094ns
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.510ns = ( 41.510 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.627ns
+    Clock Pessimism Removal (CPR):    0.117ns
   Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.182ns
@@ -552,16 +734,16 @@ Slack (MET) :             35.905ns  (required time - arrival time)
                                                      -3.333    -1.757 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -0.096    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.639     1.639    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[4]/C
+                         net (fo=45, routed)          1.627     1.627    VGA_THING/CLK
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[4]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X1Y47          FDRE (Prop_fdre_C_Q)         0.456     2.095 f  VGA_THING/vcount_reg[4]/Q
-                         net (fo=6, routed)           1.581     3.676    VGA_THING/vcount_reg__0[4]
-    SLICE_X2Y47          LUT6 (Prop_lut6_I0_O)        0.124     3.800 f  VGA_THING/vcount[9]_i_3/O
-                         net (fo=1, routed)           0.670     4.470    VGA_THING/vcount[9]_i_3_n_0
-    SLICE_X2Y47          LUT5 (Prop_lut5_I4_O)        0.124     4.594 r  VGA_THING/vcount[9]_i_1/O
-                         net (fo=10, routed)          0.492     5.087    VGA_THING/clear
-    SLICE_X2Y46          FDRE                                         r  VGA_THING/vcount_reg[3]/R
+    SLICE_X3Y50          FDRE (Prop_fdre_C_Q)         0.456     2.083 f  VGA_THING/vcount_reg[4]/Q
+                         net (fo=6, routed)           1.017     3.100    VGA_THING/vcount_reg__0[4]
+    SLICE_X3Y51          LUT6 (Prop_lut6_I4_O)        0.124     3.224 r  VGA_THING/vcount[9]_i_3/O
+                         net (fo=1, routed)           0.806     4.030    VGA_THING/vcount[9]_i_3_n_0
+    SLICE_X3Y52          LUT5 (Prop_lut5_I0_O)        0.124     4.154 r  VGA_THING/vcount[9]_i_1/O
+                         net (fo=10, routed)          0.561     4.715    VGA_THING/clear
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[3]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock clkOut_clkConverter rise edge)
@@ -572,18 +754,18 @@ Slack (MET) :             35.905ns  (required time - arrival time)
                                                      -3.129    38.328 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581    39.909    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.519    41.519    VGA_THING/CLK
-    SLICE_X2Y46          FDRE                                         r  VGA_THING/vcount_reg[3]/C
-                         clock pessimism              0.094    41.613    
-                         clock uncertainty           -0.098    41.516    
-    SLICE_X2Y46          FDRE (Setup_fdre_C_R)       -0.524    40.992    VGA_THING/vcount_reg[3]
+                         net (fo=45, routed)          1.510    41.510    VGA_THING/CLK
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[3]/C
+                         clock pessimism              0.117    41.627    
+                         clock uncertainty           -0.098    41.529    
+    SLICE_X3Y50          FDRE (Setup_fdre_C_R)       -0.429    41.100    VGA_THING/vcount_reg[3]
   -------------------------------------------------------------------
-                         required time                         40.992    
-                         arrival time                          -5.087    
+                         required time                         41.100    
+                         arrival time                          -4.715    
   -------------------------------------------------------------------
-                         slack                                 35.905    
+                         slack                                 36.385    
 
-Slack (MET) :             36.008ns  (required time - arrival time)
+Slack (MET) :             36.385ns  (required time - arrival time)
   Source:                 VGA_THING/vcount_reg[4]/C
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
   Destination:            VGA_THING/vcount_reg[4]/R
@@ -591,12 +773,12 @@ Slack (MET) :             36.008ns  (required time - arrival time)
   Path Group:             clkOut_clkConverter
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            40.000ns  (clkOut_clkConverter rise@40.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        3.465ns  (logic 0.704ns (20.315%)  route 2.761ns (79.685%))
+  Data Path Delay:        3.088ns  (logic 0.704ns (22.798%)  route 2.384ns (77.202%))
   Logic Levels:           2  (LUT5=1 LUT6=1)
   Clock Path Skew:        0.000ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.520ns = ( 41.520 - 40.000 ) 
-    Source Clock Delay      (SCD):    1.639ns
-    Clock Pessimism Removal (CPR):    0.119ns
+    Destination Clock Delay (DCD):    1.510ns = ( 41.510 - 40.000 ) 
+    Source Clock Delay      (SCD):    1.627ns
+    Clock Pessimism Removal (CPR):    0.117ns
   Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
     Discrete Jitter          (DJ):    0.182ns
@@ -612,76 +794,16 @@ Slack (MET) :             36.008ns  (required time - arrival time)
                                                      -3.333    -1.757 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.661    -0.096    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.639     1.639    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[4]/C
+                         net (fo=45, routed)          1.627     1.627    VGA_THING/CLK
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[4]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X1Y47          FDRE (Prop_fdre_C_Q)         0.456     2.095 f  VGA_THING/vcount_reg[4]/Q
-                         net (fo=6, routed)           1.581     3.676    VGA_THING/vcount_reg__0[4]
-    SLICE_X2Y47          LUT6 (Prop_lut6_I0_O)        0.124     3.800 f  VGA_THING/vcount[9]_i_3/O
-                         net (fo=1, routed)           0.670     4.470    VGA_THING/vcount[9]_i_3_n_0
-    SLICE_X2Y47          LUT5 (Prop_lut5_I4_O)        0.124     4.594 r  VGA_THING/vcount[9]_i_1/O
-                         net (fo=10, routed)          0.510     5.105    VGA_THING/clear
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[4]/R
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clkOut_clkConverter rise edge)
-                                                     40.000    40.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000    40.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         1.457    41.457    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.129    38.328 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.581    39.909    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.520    41.520    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[4]/C
-                         clock pessimism              0.119    41.639    
-                         clock uncertainty           -0.098    41.542    
-    SLICE_X1Y47          FDRE (Setup_fdre_C_R)       -0.429    41.113    VGA_THING/vcount_reg[4]
-  -------------------------------------------------------------------
-                         required time                         41.113    
-                         arrival time                          -5.105    
-  -------------------------------------------------------------------
-                         slack                                 36.008    
-
-Slack (MET) :             36.008ns  (required time - arrival time)
-  Source:                 VGA_THING/vcount_reg[4]/C
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            VGA_THING/vcount_reg[5]/R
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clkOut_clkConverter
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            40.000ns  (clkOut_clkConverter rise@40.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        3.465ns  (logic 0.704ns (20.315%)  route 2.761ns (79.685%))
-  Logic Levels:           2  (LUT5=1 LUT6=1)
-  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.520ns = ( 41.520 - 40.000 ) 
-    Source Clock Delay      (SCD):    1.639ns
-    Clock Pessimism Removal (CPR):    0.119ns
-  Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Discrete Jitter          (DJ):    0.182ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clkOut_clkConverter rise edge)
-                                                      0.000     0.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         1.575     1.575    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.333    -1.757 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.661    -0.096    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.639     1.639    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[4]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X1Y47          FDRE (Prop_fdre_C_Q)         0.456     2.095 f  VGA_THING/vcount_reg[4]/Q
-                         net (fo=6, routed)           1.581     3.676    VGA_THING/vcount_reg__0[4]
-    SLICE_X2Y47          LUT6 (Prop_lut6_I0_O)        0.124     3.800 f  VGA_THING/vcount[9]_i_3/O
-                         net (fo=1, routed)           0.670     4.470    VGA_THING/vcount[9]_i_3_n_0
-    SLICE_X2Y47          LUT5 (Prop_lut5_I4_O)        0.124     4.594 r  VGA_THING/vcount[9]_i_1/O
-                         net (fo=10, routed)          0.510     5.105    VGA_THING/clear
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[5]/R
+    SLICE_X3Y50          FDRE (Prop_fdre_C_Q)         0.456     2.083 f  VGA_THING/vcount_reg[4]/Q
+                         net (fo=6, routed)           1.017     3.100    VGA_THING/vcount_reg__0[4]
+    SLICE_X3Y51          LUT6 (Prop_lut6_I4_O)        0.124     3.224 r  VGA_THING/vcount[9]_i_3/O
+                         net (fo=1, routed)           0.806     4.030    VGA_THING/vcount[9]_i_3_n_0
+    SLICE_X3Y52          LUT5 (Prop_lut5_I0_O)        0.124     4.154 r  VGA_THING/vcount[9]_i_1/O
+                         net (fo=10, routed)          0.561     4.715    VGA_THING/clear
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[4]/R
   -------------------------------------------------------------------    -------------------
 
                          (clock clkOut_clkConverter rise edge)
@@ -692,136 +814,16 @@ Slack (MET) :             36.008ns  (required time - arrival time)
                                                      -3.129    38.328 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.581    39.909    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.520    41.520    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[5]/C
-                         clock pessimism              0.119    41.639    
-                         clock uncertainty           -0.098    41.542    
-    SLICE_X1Y47          FDRE (Setup_fdre_C_R)       -0.429    41.113    VGA_THING/vcount_reg[5]
+                         net (fo=45, routed)          1.510    41.510    VGA_THING/CLK
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[4]/C
+                         clock pessimism              0.117    41.627    
+                         clock uncertainty           -0.098    41.529    
+    SLICE_X3Y50          FDRE (Setup_fdre_C_R)       -0.429    41.100    VGA_THING/vcount_reg[4]
   -------------------------------------------------------------------
-                         required time                         41.113    
-                         arrival time                          -5.105    
+                         required time                         41.100    
+                         arrival time                          -4.715    
   -------------------------------------------------------------------
-                         slack                                 36.008    
-
-Slack (MET) :             36.008ns  (required time - arrival time)
-  Source:                 VGA_THING/vcount_reg[4]/C
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            VGA_THING/vcount_reg[6]/R
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clkOut_clkConverter
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            40.000ns  (clkOut_clkConverter rise@40.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        3.465ns  (logic 0.704ns (20.315%)  route 2.761ns (79.685%))
-  Logic Levels:           2  (LUT5=1 LUT6=1)
-  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.520ns = ( 41.520 - 40.000 ) 
-    Source Clock Delay      (SCD):    1.639ns
-    Clock Pessimism Removal (CPR):    0.119ns
-  Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Discrete Jitter          (DJ):    0.182ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clkOut_clkConverter rise edge)
-                                                      0.000     0.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         1.575     1.575    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.333    -1.757 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.661    -0.096    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.639     1.639    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[4]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X1Y47          FDRE (Prop_fdre_C_Q)         0.456     2.095 f  VGA_THING/vcount_reg[4]/Q
-                         net (fo=6, routed)           1.581     3.676    VGA_THING/vcount_reg__0[4]
-    SLICE_X2Y47          LUT6 (Prop_lut6_I0_O)        0.124     3.800 f  VGA_THING/vcount[9]_i_3/O
-                         net (fo=1, routed)           0.670     4.470    VGA_THING/vcount[9]_i_3_n_0
-    SLICE_X2Y47          LUT5 (Prop_lut5_I4_O)        0.124     4.594 r  VGA_THING/vcount[9]_i_1/O
-                         net (fo=10, routed)          0.510     5.105    VGA_THING/clear
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[6]/R
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clkOut_clkConverter rise edge)
-                                                     40.000    40.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000    40.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         1.457    41.457    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.129    38.328 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.581    39.909    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.520    41.520    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[6]/C
-                         clock pessimism              0.119    41.639    
-                         clock uncertainty           -0.098    41.542    
-    SLICE_X1Y47          FDRE (Setup_fdre_C_R)       -0.429    41.113    VGA_THING/vcount_reg[6]
-  -------------------------------------------------------------------
-                         required time                         41.113    
-                         arrival time                          -5.105    
-  -------------------------------------------------------------------
-                         slack                                 36.008    
-
-Slack (MET) :             36.008ns  (required time - arrival time)
-  Source:                 VGA_THING/vcount_reg[4]/C
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            VGA_THING/vcount_reg[7]/R
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clkOut_clkConverter
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            40.000ns  (clkOut_clkConverter rise@40.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        3.465ns  (logic 0.704ns (20.315%)  route 2.761ns (79.685%))
-  Logic Levels:           2  (LUT5=1 LUT6=1)
-  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    1.520ns = ( 41.520 - 40.000 ) 
-    Source Clock Delay      (SCD):    1.639ns
-    Clock Pessimism Removal (CPR):    0.119ns
-  Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Discrete Jitter          (DJ):    0.182ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clkOut_clkConverter rise edge)
-                                                      0.000     0.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         1.575     1.575    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.333    -1.757 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.661    -0.096    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.639     1.639    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[4]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X1Y47          FDRE (Prop_fdre_C_Q)         0.456     2.095 f  VGA_THING/vcount_reg[4]/Q
-                         net (fo=6, routed)           1.581     3.676    VGA_THING/vcount_reg__0[4]
-    SLICE_X2Y47          LUT6 (Prop_lut6_I0_O)        0.124     3.800 f  VGA_THING/vcount[9]_i_3/O
-                         net (fo=1, routed)           0.670     4.470    VGA_THING/vcount[9]_i_3_n_0
-    SLICE_X2Y47          LUT5 (Prop_lut5_I4_O)        0.124     4.594 r  VGA_THING/vcount[9]_i_1/O
-                         net (fo=10, routed)          0.510     5.105    VGA_THING/clear
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[7]/R
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clkOut_clkConverter rise edge)
-                                                     40.000    40.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000    40.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         1.457    41.457    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -3.129    38.328 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           1.581    39.909    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    40.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          1.520    41.520    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[7]/C
-                         clock pessimism              0.119    41.639    
-                         clock uncertainty           -0.098    41.542    
-    SLICE_X1Y47          FDRE (Setup_fdre_C_R)       -0.429    41.113    VGA_THING/vcount_reg[7]
-  -------------------------------------------------------------------
-                         required time                         41.113    
-                         arrival time                          -5.105    
-  -------------------------------------------------------------------
-                         slack                                 36.008    
+                         slack                                 36.385    
 
 
 
@@ -829,19 +831,70 @@ Slack (MET) :             36.008ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.217ns  (arrival time - required time)
-  Source:                 VGA_THING/hcount_reg[0]/C
+Slack (MET) :             0.173ns  (arrival time - required time)
+  Source:                 VGA_THING/vcount_reg[4]/C
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            VGA_THING/hCountOut_reg[0]/D
+  Destination:            VGA_THING/vCountOut_reg[4]/D
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clkOut_clkConverter
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clkOut_clkConverter rise@0.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        0.319ns  (logic 0.141ns (44.135%)  route 0.178ns (55.865%))
+  Data Path Delay:        0.278ns  (logic 0.141ns (50.632%)  route 0.137ns (49.368%))
   Logic Levels:           0  
-  Clock Path Skew:        0.017ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.865ns
-    Source Clock Delay      (SCD):    0.593ns
+  Clock Path Skew:        0.035ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.863ns
+    Source Clock Delay      (SCD):    0.594ns
+    Clock Pessimism Removal (CPR):    0.234ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkOut_clkConverter rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         0.549     0.549    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.061    -0.512 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -0.026    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          0.594     0.594    VGA_THING/CLK
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y50          FDRE (Prop_fdre_C_Q)         0.141     0.735 r  VGA_THING/vcount_reg[4]/Q
+                         net (fo=6, routed)           0.137     0.872    VGA_THING/vcount_reg__0[4]
+    SLICE_X5Y51          FDRE                                         r  VGA_THING/vCountOut_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clkOut_clkConverter rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         0.817     0.817    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.375    -0.559 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -0.029    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          0.863     0.863    VGA_THING/CLK
+    SLICE_X5Y51          FDRE                                         r  VGA_THING/vCountOut_reg[4]/C
+                         clock pessimism             -0.234     0.629    
+    SLICE_X5Y51          FDRE (Hold_fdre_C_D)         0.070     0.699    VGA_THING/vCountOut_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -0.699    
+                         arrival time                           0.872    
+  -------------------------------------------------------------------
+                         slack                                  0.173    
+
+Slack (MET) :             0.205ns  (arrival time - required time)
+  Source:                 VGA_THING/vcount_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            VGA_THING/vCountOut_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clkOut_clkConverter
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clkOut_clkConverter rise@0.000ns - clkOut_clkConverter rise@0.000ns)
+  Data Path Delay:        0.293ns  (logic 0.141ns (48.186%)  route 0.152ns (51.814%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.864ns
+    Source Clock Delay      (SCD):    0.594ns
     Clock Pessimism Removal (CPR):    0.255ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -854,12 +907,12 @@ Slack (MET) :             0.217ns  (arrival time - required time)
                                                      -1.061    -0.512 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.486    -0.026    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          0.593     0.593    VGA_THING/CLK
-    SLICE_X5Y46          FDRE                                         r  VGA_THING/hcount_reg[0]/C
+                         net (fo=45, routed)          0.594     0.594    VGA_THING/CLK
+    SLICE_X3Y51          FDRE                                         r  VGA_THING/vcount_reg[9]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X5Y46          FDRE (Prop_fdre_C_Q)         0.141     0.734 r  VGA_THING/hcount_reg[0]/Q
-                         net (fo=9, routed)           0.178     0.912    VGA_THING/hcount_reg__0[0]
-    SLICE_X6Y47          FDRE                                         r  VGA_THING/hCountOut_reg[0]/D
+    SLICE_X3Y51          FDRE (Prop_fdre_C_Q)         0.141     0.735 r  VGA_THING/vcount_reg[9]/Q
+                         net (fo=6, routed)           0.152     0.886    VGA_THING/vcount_reg__0[9]
+    SLICE_X3Y52          FDRE                                         r  VGA_THING/vCountOut_reg[9]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clkOut_clkConverter rise edge)
@@ -870,79 +923,28 @@ Slack (MET) :             0.217ns  (arrival time - required time)
                                                      -1.375    -0.559 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.530    -0.029    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          0.865     0.865    VGA_THING/CLK
-    SLICE_X6Y47          FDRE                                         r  VGA_THING/hCountOut_reg[0]/C
+                         net (fo=45, routed)          0.864     0.864    VGA_THING/CLK
+    SLICE_X3Y52          FDRE                                         r  VGA_THING/vCountOut_reg[9]/C
                          clock pessimism             -0.255     0.610    
-    SLICE_X6Y47          FDRE (Hold_fdre_C_D)         0.085     0.695    VGA_THING/hCountOut_reg[0]
+    SLICE_X3Y52          FDRE (Hold_fdre_C_D)         0.072     0.682    VGA_THING/vCountOut_reg[9]
   -------------------------------------------------------------------
-                         required time                         -0.695    
-                         arrival time                           0.912    
+                         required time                         -0.682    
+                         arrival time                           0.886    
   -------------------------------------------------------------------
-                         slack                                  0.217    
+                         slack                                  0.205    
 
-Slack (MET) :             0.219ns  (arrival time - required time)
-  Source:                 VGA_THING/vcount_reg[2]/C
+Slack (MET) :             0.211ns  (arrival time - required time)
+  Source:                 VGA_THING/vcount_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            VGA_THING/vCountOut_reg[2]/D
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clkOut_clkConverter
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clkOut_clkConverter rise@0.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        0.311ns  (logic 0.164ns (52.807%)  route 0.147ns (47.193%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.017ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.867ns
-    Source Clock Delay      (SCD):    0.595ns
-    Clock Pessimism Removal (CPR):    0.255ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clkOut_clkConverter rise edge)
-                                                      0.000     0.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         0.549     0.549    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -1.061    -0.512 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -0.026    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          0.595     0.595    VGA_THING/CLK
-    SLICE_X2Y46          FDRE                                         r  VGA_THING/vcount_reg[2]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X2Y46          FDRE (Prop_fdre_C_Q)         0.164     0.759 r  VGA_THING/vcount_reg[2]/Q
-                         net (fo=8, routed)           0.147     0.905    VGA_THING/vcount_reg__0[2]
-    SLICE_X0Y47          FDRE                                         r  VGA_THING/vCountOut_reg[2]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clkOut_clkConverter rise edge)
-                                                      0.000     0.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         0.817     0.817    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -1.375    -0.559 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -0.029    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          0.867     0.867    VGA_THING/CLK
-    SLICE_X0Y47          FDRE                                         r  VGA_THING/vCountOut_reg[2]/C
-                         clock pessimism             -0.255     0.612    
-    SLICE_X0Y47          FDRE (Hold_fdre_C_D)         0.075     0.687    VGA_THING/vCountOut_reg[2]
-  -------------------------------------------------------------------
-                         required time                         -0.687    
-                         arrival time                           0.905    
-  -------------------------------------------------------------------
-                         slack                                  0.219    
-
-Slack (MET) :             0.231ns  (arrival time - required time)
-  Source:                 VGA_THING/hcount_reg[6]/C
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            VGA_THING/hCountOut_reg[6]/D
+  Destination:            VGA_THING/vcount_reg[3]/D
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clkOut_clkConverter
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clkOut_clkConverter rise@0.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        0.314ns  (logic 0.141ns (44.945%)  route 0.173ns (55.055%))
-  Logic Levels:           0  
+  Data Path Delay:        0.331ns  (logic 0.213ns (64.446%)  route 0.118ns (35.554%))
+  Logic Levels:           1  (LUT4=1)
   Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.865ns
+    Destination Clock Delay (DCD):    0.864ns
     Source Clock Delay      (SCD):    0.594ns
     Clock Pessimism Removal (CPR):    0.258ns
 
@@ -957,117 +959,13 @@ Slack (MET) :             0.231ns  (arrival time - required time)
                          net (fo=1, routed)           0.486    -0.026    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  CLK_Converter/inst/clkout1_buf/O
                          net (fo=45, routed)          0.594     0.594    VGA_THING/CLK
-    SLICE_X5Y47          FDRE                                         r  VGA_THING/hcount_reg[6]/C
+    SLICE_X2Y50          FDRE                                         r  VGA_THING/vcount_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X5Y47          FDRE (Prop_fdre_C_Q)         0.141     0.735 r  VGA_THING/hcount_reg[6]/Q
-                         net (fo=8, routed)           0.173     0.907    VGA_THING/hcount_reg__0[6]
-    SLICE_X4Y47          FDRE                                         r  VGA_THING/hCountOut_reg[6]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clkOut_clkConverter rise edge)
-                                                      0.000     0.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         0.817     0.817    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -1.375    -0.559 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -0.029    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          0.865     0.865    VGA_THING/CLK
-    SLICE_X4Y47          FDRE                                         r  VGA_THING/hCountOut_reg[6]/C
-                         clock pessimism             -0.258     0.607    
-    SLICE_X4Y47          FDRE (Hold_fdre_C_D)         0.070     0.677    VGA_THING/hCountOut_reg[6]
-  -------------------------------------------------------------------
-                         required time                         -0.677    
-                         arrival time                           0.907    
-  -------------------------------------------------------------------
-                         slack                                  0.231    
-
-Slack (MET) :             0.240ns  (arrival time - required time)
-  Source:                 VGA_THING/vcount_reg[5]/C
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            VGA_THING/vcount_reg[9]/D
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clkOut_clkConverter
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clkOut_clkConverter rise@0.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        0.332ns  (logic 0.186ns (55.942%)  route 0.146ns (44.058%))
-  Logic Levels:           1  (LUT6=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.867ns
-    Source Clock Delay      (SCD):    0.596ns
-    Clock Pessimism Removal (CPR):    0.271ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clkOut_clkConverter rise edge)
-                                                      0.000     0.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         0.549     0.549    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -1.061    -0.512 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -0.026    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          0.596     0.596    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[5]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X1Y47          FDRE (Prop_fdre_C_Q)         0.141     0.737 r  VGA_THING/vcount_reg[5]/Q
-                         net (fo=9, routed)           0.146     0.883    VGA_THING/vcount_reg__0[5]
-    SLICE_X1Y47          LUT6 (Prop_lut6_I3_O)        0.045     0.928 r  VGA_THING/vcount[9]_i_2/O
-                         net (fo=1, routed)           0.000     0.928    VGA_THING/plusOp__0[9]
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[9]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clkOut_clkConverter rise edge)
-                                                      0.000     0.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         0.817     0.817    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -1.375    -0.559 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -0.029    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          0.867     0.867    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[9]/C
-                         clock pessimism             -0.271     0.596    
-    SLICE_X1Y47          FDRE (Hold_fdre_C_D)         0.092     0.688    VGA_THING/vcount_reg[9]
-  -------------------------------------------------------------------
-                         required time                         -0.688    
-                         arrival time                           0.928    
-  -------------------------------------------------------------------
-                         slack                                  0.240    
-
-Slack (MET) :             0.241ns  (arrival time - required time)
-  Source:                 VGA_THING/hcount_reg[1]/C
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            VGA_THING/hcount_reg[5]/D
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clkOut_clkConverter
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clkOut_clkConverter rise@0.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        0.333ns  (logic 0.186ns (55.892%)  route 0.147ns (44.108%))
-  Logic Levels:           1  (LUT6=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.864ns
-    Source Clock Delay      (SCD):    0.593ns
-    Clock Pessimism Removal (CPR):    0.271ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clkOut_clkConverter rise edge)
-                                                      0.000     0.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         0.549     0.549    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -1.061    -0.512 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -0.026    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          0.593     0.593    VGA_THING/CLK
-    SLICE_X5Y46          FDRE                                         r  VGA_THING/hcount_reg[1]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X5Y46          FDRE (Prop_fdre_C_Q)         0.141     0.734 r  VGA_THING/hcount_reg[1]/Q
-                         net (fo=8, routed)           0.147     0.880    VGA_THING/hcount_reg__0[1]
-    SLICE_X5Y46          LUT6 (Prop_lut6_I3_O)        0.045     0.925 r  VGA_THING/hcount[5]_i_1/O
-                         net (fo=1, routed)           0.000     0.925    VGA_THING/hcount[5]_i_1_n_0
-    SLICE_X5Y46          FDRE                                         r  VGA_THING/hcount_reg[5]/D
+    SLICE_X2Y50          FDRE (Prop_fdre_C_Q)         0.164     0.758 r  VGA_THING/vcount_reg[1]/Q
+                         net (fo=9, routed)           0.118     0.875    VGA_THING/vcount_reg__0[1]
+    SLICE_X3Y50          LUT4 (Prop_lut4_I2_O)        0.049     0.924 r  VGA_THING/vcount[3]_i_1/O
+                         net (fo=1, routed)           0.000     0.924    VGA_THING/plusOp__0[3]
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clkOut_clkConverter rise edge)
@@ -1079,187 +977,28 @@ Slack (MET) :             0.241ns  (arrival time - required time)
                          net (fo=1, routed)           0.530    -0.029    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  CLK_Converter/inst/clkout1_buf/O
                          net (fo=45, routed)          0.864     0.864    VGA_THING/CLK
-    SLICE_X5Y46          FDRE                                         r  VGA_THING/hcount_reg[5]/C
-                         clock pessimism             -0.271     0.593    
-    SLICE_X5Y46          FDRE (Hold_fdre_C_D)         0.092     0.685    VGA_THING/hcount_reg[5]
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[3]/C
+                         clock pessimism             -0.258     0.607    
+    SLICE_X3Y50          FDRE (Hold_fdre_C_D)         0.107     0.714    VGA_THING/vcount_reg[3]
   -------------------------------------------------------------------
-                         required time                         -0.685    
-                         arrival time                           0.925    
+                         required time                         -0.714    
+                         arrival time                           0.924    
   -------------------------------------------------------------------
-                         slack                                  0.241    
+                         slack                                  0.211    
 
-Slack (MET) :             0.255ns  (arrival time - required time)
-  Source:                 VGA_THING/vcount_reg[6]/C
+Slack (MET) :             0.213ns  (arrival time - required time)
+  Source:                 VGA_THING/hcount_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            VGA_THING/vcount_reg[7]/D
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clkOut_clkConverter
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clkOut_clkConverter rise@0.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        0.362ns  (logic 0.183ns (50.505%)  route 0.179ns (49.495%))
-  Logic Levels:           1  (LUT4=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.867ns
-    Source Clock Delay      (SCD):    0.596ns
-    Clock Pessimism Removal (CPR):    0.271ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clkOut_clkConverter rise edge)
-                                                      0.000     0.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         0.549     0.549    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -1.061    -0.512 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -0.026    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          0.596     0.596    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[6]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X1Y47          FDRE (Prop_fdre_C_Q)         0.141     0.737 r  VGA_THING/vcount_reg[6]/Q
-                         net (fo=8, routed)           0.179     0.916    VGA_THING/vcount_reg__0[6]
-    SLICE_X1Y47          LUT4 (Prop_lut4_I3_O)        0.042     0.958 r  VGA_THING/vcount[7]_i_1/O
-                         net (fo=1, routed)           0.000     0.958    VGA_THING/plusOp__0[7]
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[7]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clkOut_clkConverter rise edge)
-                                                      0.000     0.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         0.817     0.817    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -1.375    -0.559 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -0.029    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          0.867     0.867    VGA_THING/CLK
-    SLICE_X1Y47          FDRE                                         r  VGA_THING/vcount_reg[7]/C
-                         clock pessimism             -0.271     0.596    
-    SLICE_X1Y47          FDRE (Hold_fdre_C_D)         0.107     0.703    VGA_THING/vcount_reg[7]
-  -------------------------------------------------------------------
-                         required time                         -0.703    
-                         arrival time                           0.958    
-  -------------------------------------------------------------------
-                         slack                                  0.255    
-
-Slack (MET) :             0.257ns  (arrival time - required time)
-  Source:                 VGA_THING/vcount_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            VGA_THING/vcount_reg[3]/D
+  Destination:            VGA_THING/hCountOut_reg[0]/D
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clkOut_clkConverter
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clkOut_clkConverter rise@0.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        0.388ns  (logic 0.212ns (54.680%)  route 0.176ns (45.320%))
-  Logic Levels:           1  (LUT4=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.866ns
-    Source Clock Delay      (SCD):    0.595ns
-    Clock Pessimism Removal (CPR):    0.271ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clkOut_clkConverter rise edge)
-                                                      0.000     0.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         0.549     0.549    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -1.061    -0.512 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -0.026    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          0.595     0.595    VGA_THING/CLK
-    SLICE_X2Y46          FDRE                                         r  VGA_THING/vcount_reg[2]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X2Y46          FDRE (Prop_fdre_C_Q)         0.164     0.759 r  VGA_THING/vcount_reg[2]/Q
-                         net (fo=8, routed)           0.176     0.934    VGA_THING/vcount_reg__0[2]
-    SLICE_X2Y46          LUT4 (Prop_lut4_I3_O)        0.048     0.982 r  VGA_THING/vcount[3]_i_1/O
-                         net (fo=1, routed)           0.000     0.982    VGA_THING/plusOp__0[3]
-    SLICE_X2Y46          FDRE                                         r  VGA_THING/vcount_reg[3]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clkOut_clkConverter rise edge)
-                                                      0.000     0.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         0.817     0.817    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -1.375    -0.559 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -0.029    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          0.866     0.866    VGA_THING/CLK
-    SLICE_X2Y46          FDRE                                         r  VGA_THING/vcount_reg[3]/C
-                         clock pessimism             -0.271     0.595    
-    SLICE_X2Y46          FDRE (Hold_fdre_C_D)         0.131     0.726    VGA_THING/vcount_reg[3]
-  -------------------------------------------------------------------
-                         required time                         -0.726    
-                         arrival time                           0.982    
-  -------------------------------------------------------------------
-                         slack                                  0.257    
-
-Slack (MET) :             0.264ns  (arrival time - required time)
-  Source:                 VGA_THING/vcount_reg[2]/C
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            VGA_THING/vcount_reg[2]/D
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clkOut_clkConverter
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clkOut_clkConverter rise@0.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        0.385ns  (logic 0.209ns (54.326%)  route 0.176ns (45.674%))
-  Logic Levels:           1  (LUT3=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.866ns
-    Source Clock Delay      (SCD):    0.595ns
-    Clock Pessimism Removal (CPR):    0.271ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clkOut_clkConverter rise edge)
-                                                      0.000     0.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         0.549     0.549    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -1.061    -0.512 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.486    -0.026    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          0.595     0.595    VGA_THING/CLK
-    SLICE_X2Y46          FDRE                                         r  VGA_THING/vcount_reg[2]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X2Y46          FDRE (Prop_fdre_C_Q)         0.164     0.759 r  VGA_THING/vcount_reg[2]/Q
-                         net (fo=8, routed)           0.176     0.934    VGA_THING/vcount_reg__0[2]
-    SLICE_X2Y46          LUT3 (Prop_lut3_I0_O)        0.045     0.979 r  VGA_THING/vcount[2]_i_1/O
-                         net (fo=1, routed)           0.000     0.979    VGA_THING/plusOp__0[2]
-    SLICE_X2Y46          FDRE                                         r  VGA_THING/vcount_reg[2]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clkOut_clkConverter rise edge)
-                                                      0.000     0.000 r  
-    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
-                         net (fo=101, routed)         0.817     0.817    CLK_Converter/inst/clkIn
-    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
-                                                     -1.375    -0.559 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-                         net (fo=1, routed)           0.530    -0.029    CLK_Converter/inst/clkOut_clkConverter
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          0.866     0.866    VGA_THING/CLK
-    SLICE_X2Y46          FDRE                                         r  VGA_THING/vcount_reg[2]/C
-                         clock pessimism             -0.271     0.595    
-    SLICE_X2Y46          FDRE (Hold_fdre_C_D)         0.121     0.716    VGA_THING/vcount_reg[2]
-  -------------------------------------------------------------------
-                         required time                         -0.716    
-                         arrival time                           0.979    
-  -------------------------------------------------------------------
-                         slack                                  0.264    
-
-Slack (MET) :             0.264ns  (arrival time - required time)
-  Source:                 VGA_THING/hcount_reg[4]/C
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            VGA_THING/hCountOut_reg[4]/D
-                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Path Group:             clkOut_clkConverter
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clkOut_clkConverter rise@0.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        0.298ns  (logic 0.128ns (42.902%)  route 0.170ns (57.098%))
+  Data Path Delay:        0.288ns  (logic 0.141ns (48.889%)  route 0.147ns (51.111%))
   Logic Levels:           0  
-  Clock Path Skew:        0.017ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.865ns
-    Source Clock Delay      (SCD):    0.593ns
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.863ns
+    Source Clock Delay      (SCD):    0.592ns
     Clock Pessimism Removal (CPR):    0.255ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1272,12 +1011,12 @@ Slack (MET) :             0.264ns  (arrival time - required time)
                                                      -1.061    -0.512 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.486    -0.026    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          0.593     0.593    VGA_THING/CLK
-    SLICE_X5Y46          FDRE                                         r  VGA_THING/hcount_reg[4]/C
+                         net (fo=45, routed)          0.592     0.592    VGA_THING/CLK
+    SLICE_X4Y51          FDRE                                         r  VGA_THING/hcount_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X5Y46          FDRE (Prop_fdre_C_Q)         0.128     0.721 r  VGA_THING/hcount_reg[4]/Q
-                         net (fo=6, routed)           0.170     0.891    VGA_THING/hcount_reg__0[4]
-    SLICE_X4Y47          FDRE                                         r  VGA_THING/hCountOut_reg[4]/D
+    SLICE_X4Y51          FDRE (Prop_fdre_C_Q)         0.141     0.733 r  VGA_THING/hcount_reg[0]/Q
+                         net (fo=10, routed)          0.147     0.880    VGA_THING/hcount_reg__0[0]
+    SLICE_X6Y50          FDRE                                         r  VGA_THING/hCountOut_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clkOut_clkConverter rise edge)
@@ -1288,29 +1027,82 @@ Slack (MET) :             0.264ns  (arrival time - required time)
                                                      -1.375    -0.559 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.530    -0.029    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          0.865     0.865    VGA_THING/CLK
-    SLICE_X4Y47          FDRE                                         r  VGA_THING/hCountOut_reg[4]/C
-                         clock pessimism             -0.255     0.610    
-    SLICE_X4Y47          FDRE (Hold_fdre_C_D)         0.017     0.627    VGA_THING/hCountOut_reg[4]
+                         net (fo=45, routed)          0.863     0.863    VGA_THING/CLK
+    SLICE_X6Y50          FDRE                                         r  VGA_THING/hCountOut_reg[0]/C
+                         clock pessimism             -0.255     0.608    
+    SLICE_X6Y50          FDRE (Hold_fdre_C_D)         0.059     0.667    VGA_THING/hCountOut_reg[0]
   -------------------------------------------------------------------
-                         required time                         -0.627    
-                         arrival time                           0.891    
+                         required time                         -0.667    
+                         arrival time                           0.880    
   -------------------------------------------------------------------
-                         slack                                  0.264    
+                         slack                                  0.213    
 
-Slack (MET) :             0.266ns  (arrival time - required time)
-  Source:                 VGA_THING/hcount_reg[1]/C
+Slack (MET) :             0.222ns  (arrival time - required time)
+  Source:                 VGA_THING/vcount_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
-  Destination:            VGA_THING/hcount_reg[2]/D
+  Destination:            VGA_THING/vcount_reg[2]/D
                             (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
   Path Group:             clkOut_clkConverter
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (clkOut_clkConverter rise@0.000ns - clkOut_clkConverter rise@0.000ns)
-  Data Path Delay:        0.373ns  (logic 0.183ns (49.022%)  route 0.190ns (50.978%))
+  Data Path Delay:        0.327ns  (logic 0.209ns (64.010%)  route 0.118ns (35.990%))
   Logic Levels:           1  (LUT3=1)
-  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
     Destination Clock Delay (DCD):    0.864ns
-    Source Clock Delay      (SCD):    0.593ns
+    Source Clock Delay      (SCD):    0.594ns
+    Clock Pessimism Removal (CPR):    0.258ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkOut_clkConverter rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         0.549     0.549    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.061    -0.512 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -0.026    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          0.594     0.594    VGA_THING/CLK
+    SLICE_X2Y50          FDRE                                         r  VGA_THING/vcount_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y50          FDRE (Prop_fdre_C_Q)         0.164     0.758 r  VGA_THING/vcount_reg[1]/Q
+                         net (fo=9, routed)           0.118     0.875    VGA_THING/vcount_reg__0[1]
+    SLICE_X3Y50          LUT3 (Prop_lut3_I0_O)        0.045     0.920 r  VGA_THING/vcount[2]_i_1/O
+                         net (fo=1, routed)           0.000     0.920    VGA_THING/plusOp__0[2]
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clkOut_clkConverter rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         0.817     0.817    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.375    -0.559 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -0.029    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          0.864     0.864    VGA_THING/CLK
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[2]/C
+                         clock pessimism             -0.258     0.607    
+    SLICE_X3Y50          FDRE (Hold_fdre_C_D)         0.092     0.699    VGA_THING/vcount_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -0.699    
+                         arrival time                           0.920    
+  -------------------------------------------------------------------
+                         slack                                  0.222    
+
+Slack (MET) :             0.244ns  (arrival time - required time)
+  Source:                 VGA_THING/hcount_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            VGA_THING/hcount_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clkOut_clkConverter
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clkOut_clkConverter rise@0.000ns - clkOut_clkConverter rise@0.000ns)
+  Data Path Delay:        0.351ns  (logic 0.183ns (52.101%)  route 0.168ns (47.899%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.863ns
+    Source Clock Delay      (SCD):    0.592ns
     Clock Pessimism Removal (CPR):    0.271ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -1323,14 +1115,67 @@ Slack (MET) :             0.266ns  (arrival time - required time)
                                                      -1.061    -0.512 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           0.486    -0.026    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  CLK_Converter/inst/clkout1_buf/O
-                         net (fo=45, routed)          0.593     0.593    VGA_THING/CLK
-    SLICE_X5Y46          FDRE                                         r  VGA_THING/hcount_reg[1]/C
+                         net (fo=45, routed)          0.592     0.592    VGA_THING/CLK
+    SLICE_X5Y50          FDRE                                         r  VGA_THING/hcount_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X5Y46          FDRE (Prop_fdre_C_Q)         0.141     0.734 r  VGA_THING/hcount_reg[1]/Q
-                         net (fo=8, routed)           0.190     0.924    VGA_THING/hcount_reg__0[1]
-    SLICE_X5Y46          LUT3 (Prop_lut3_I1_O)        0.042     0.966 r  VGA_THING/hcount[2]_i_1/O
-                         net (fo=1, routed)           0.000     0.966    VGA_THING/plusOp[2]
-    SLICE_X5Y46          FDRE                                         r  VGA_THING/hcount_reg[2]/D
+    SLICE_X5Y50          FDRE (Prop_fdre_C_Q)         0.141     0.733 r  VGA_THING/hcount_reg[2]/Q
+                         net (fo=8, routed)           0.168     0.901    VGA_THING/hcount_reg__0[2]
+    SLICE_X5Y50          LUT4 (Prop_lut4_I0_O)        0.042     0.943 r  VGA_THING/hcount[3]_i_1/O
+                         net (fo=1, routed)           0.000     0.943    VGA_THING/plusOp[3]
+    SLICE_X5Y50          FDRE                                         r  VGA_THING/hcount_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clkOut_clkConverter rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         0.817     0.817    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.375    -0.559 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -0.029    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          0.863     0.863    VGA_THING/CLK
+    SLICE_X5Y50          FDRE                                         r  VGA_THING/hcount_reg[3]/C
+                         clock pessimism             -0.271     0.592    
+    SLICE_X5Y50          FDRE (Hold_fdre_C_D)         0.107     0.699    VGA_THING/hcount_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -0.699    
+                         arrival time                           0.943    
+  -------------------------------------------------------------------
+                         slack                                  0.244    
+
+Slack (MET) :             0.256ns  (arrival time - required time)
+  Source:                 VGA_THING/vcount_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            VGA_THING/vcount_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clkOut_clkConverter
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clkOut_clkConverter rise@0.000ns - clkOut_clkConverter rise@0.000ns)
+  Data Path Delay:        0.379ns  (logic 0.186ns (49.029%)  route 0.193ns (50.971%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.864ns
+    Source Clock Delay      (SCD):    0.594ns
+    Clock Pessimism Removal (CPR):    0.255ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkOut_clkConverter rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         0.549     0.549    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.061    -0.512 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -0.026    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          0.594     0.594    VGA_THING/CLK
+    SLICE_X3Y51          FDRE                                         r  VGA_THING/vcount_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y51          FDRE (Prop_fdre_C_Q)         0.141     0.735 r  VGA_THING/vcount_reg[5]/Q
+                         net (fo=9, routed)           0.193     0.928    VGA_THING/vcount_reg__0[5]
+    SLICE_X1Y51          LUT4 (Prop_lut4_I1_O)        0.045     0.973 r  VGA_THING/vcount[7]_i_1/O
+                         net (fo=1, routed)           0.000     0.973    VGA_THING/plusOp__0[7]
+    SLICE_X1Y51          FDRE                                         r  VGA_THING/vcount_reg[7]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clkOut_clkConverter rise edge)
@@ -1342,14 +1187,173 @@ Slack (MET) :             0.266ns  (arrival time - required time)
                          net (fo=1, routed)           0.530    -0.029    CLK_Converter/inst/clkOut_clkConverter
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  CLK_Converter/inst/clkout1_buf/O
                          net (fo=45, routed)          0.864     0.864    VGA_THING/CLK
-    SLICE_X5Y46          FDRE                                         r  VGA_THING/hcount_reg[2]/C
-                         clock pessimism             -0.271     0.593    
-    SLICE_X5Y46          FDRE (Hold_fdre_C_D)         0.107     0.700    VGA_THING/hcount_reg[2]
+    SLICE_X1Y51          FDRE                                         r  VGA_THING/vcount_reg[7]/C
+                         clock pessimism             -0.255     0.610    
+    SLICE_X1Y51          FDRE (Hold_fdre_C_D)         0.107     0.717    VGA_THING/vcount_reg[7]
   -------------------------------------------------------------------
-                         required time                         -0.700    
-                         arrival time                           0.966    
+                         required time                         -0.717    
+                         arrival time                           0.973    
   -------------------------------------------------------------------
-                         slack                                  0.266    
+                         slack                                  0.256    
+
+Slack (MET) :             0.261ns  (arrival time - required time)
+  Source:                 VGA_THING/vcount_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            VGA_THING/redOut_reg/D
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clkOut_clkConverter
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clkOut_clkConverter rise@0.000ns - clkOut_clkConverter rise@0.000ns)
+  Data Path Delay:        0.604ns  (logic 0.186ns (30.785%)  route 0.418ns (69.215%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.273ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.867ns
+    Source Clock Delay      (SCD):    0.594ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkOut_clkConverter rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         0.549     0.549    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.061    -0.512 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -0.026    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          0.594     0.594    VGA_THING/CLK
+    SLICE_X3Y51          FDRE                                         r  VGA_THING/vcount_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y51          FDRE (Prop_fdre_C_Q)         0.141     0.735 f  VGA_THING/vcount_reg[9]/Q
+                         net (fo=6, routed)           0.236     0.970    VGA_THING/vcount_reg__0[9]
+    SLICE_X1Y51          LUT4 (Prop_lut4_I2_O)        0.045     1.015 r  VGA_THING/redOut_i_1/O
+                         net (fo=1, routed)           0.183     1.198    VGA_THING/redOut_i_1_n_0
+    SLICE_X0Y47          FDRE                                         r  VGA_THING/redOut_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clkOut_clkConverter rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         0.817     0.817    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.375    -0.559 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -0.029    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          0.867     0.867    VGA_THING/CLK
+    SLICE_X0Y47          FDRE                                         r  VGA_THING/redOut_reg/C
+                         clock pessimism              0.000     0.867    
+    SLICE_X0Y47          FDRE (Hold_fdre_C_D)         0.070     0.937    VGA_THING/redOut_reg
+  -------------------------------------------------------------------
+                         required time                         -0.937    
+                         arrival time                           1.198    
+  -------------------------------------------------------------------
+                         slack                                  0.261    
+
+Slack (MET) :             0.263ns  (arrival time - required time)
+  Source:                 VGA_THING/hcount_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            VGA_THING/hcount_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clkOut_clkConverter
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clkOut_clkConverter rise@0.000ns - clkOut_clkConverter rise@0.000ns)
+  Data Path Delay:        0.370ns  (logic 0.186ns (50.240%)  route 0.184ns (49.760%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.863ns
+    Source Clock Delay      (SCD):    0.592ns
+    Clock Pessimism Removal (CPR):    0.255ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkOut_clkConverter rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         0.549     0.549    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.061    -0.512 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -0.026    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          0.592     0.592    VGA_THING/CLK
+    SLICE_X4Y51          FDRE                                         r  VGA_THING/hcount_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y51          FDRE (Prop_fdre_C_Q)         0.141     0.733 r  VGA_THING/hcount_reg[0]/Q
+                         net (fo=10, routed)          0.184     0.917    VGA_THING/hcount_reg__0[0]
+    SLICE_X5Y50          LUT3 (Prop_lut3_I1_O)        0.045     0.962 r  VGA_THING/hcount[2]_i_1/O
+                         net (fo=1, routed)           0.000     0.962    VGA_THING/plusOp[2]
+    SLICE_X5Y50          FDRE                                         r  VGA_THING/hcount_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clkOut_clkConverter rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         0.817     0.817    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.375    -0.559 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -0.029    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          0.863     0.863    VGA_THING/CLK
+    SLICE_X5Y50          FDRE                                         r  VGA_THING/hcount_reg[2]/C
+                         clock pessimism             -0.255     0.608    
+    SLICE_X5Y50          FDRE (Hold_fdre_C_D)         0.091     0.699    VGA_THING/hcount_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -0.699    
+                         arrival time                           0.962    
+  -------------------------------------------------------------------
+                         slack                                  0.263    
+
+Slack (MET) :             0.264ns  (arrival time - required time)
+  Source:                 VGA_THING/vcount_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            VGA_THING/vsync_reg/R
+                            (rising edge-triggered cell FDRE clocked by clkOut_clkConverter  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clkOut_clkConverter
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clkOut_clkConverter rise@0.000ns - clkOut_clkConverter rise@0.000ns)
+  Data Path Delay:        0.518ns  (logic 0.186ns (35.917%)  route 0.332ns (64.083%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.272ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.866ns
+    Source Clock Delay      (SCD):    0.594ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkOut_clkConverter rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         0.549     0.549    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.061    -0.512 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -0.026    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          0.594     0.594    VGA_THING/CLK
+    SLICE_X3Y50          FDRE                                         r  VGA_THING/vcount_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y50          FDRE (Prop_fdre_C_Q)         0.141     0.735 f  VGA_THING/vcount_reg[2]/Q
+                         net (fo=8, routed)           0.140     0.875    VGA_THING/vcount_reg__0[2]
+    SLICE_X3Y51          LUT6 (Prop_lut6_I2_O)        0.045     0.920 r  VGA_THING/vsync_i_1/O
+                         net (fo=1, routed)           0.192     1.112    VGA_THING/vsync_i_1_n_0
+    SLICE_X1Y46          FDRE                                         r  VGA_THING/vsync_reg/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clkOut_clkConverter rise edge)
+                                                      0.000     0.000 r  
+    BUFGCTRL_X0Y0        BUFG                         0.000     0.000 r  clk_IBUF_BUFG_inst/O
+                         net (fo=101, routed)         0.817     0.817    CLK_Converter/inst/clkIn
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.375    -0.559 r  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -0.029    CLK_Converter/inst/clkOut_clkConverter
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     0.000 r  CLK_Converter/inst/clkout1_buf/O
+                         net (fo=45, routed)          0.866     0.866    VGA_THING/CLK
+    SLICE_X1Y46          FDRE                                         r  VGA_THING/vsync_reg/C
+                         clock pessimism              0.000     0.866    
+    SLICE_X1Y46          FDRE (Hold_fdre_C_R)        -0.018     0.848    VGA_THING/vsync_reg
+  -------------------------------------------------------------------
+                         required time                         -0.848    
+                         arrival time                           1.112    
+  -------------------------------------------------------------------
+                         slack                                  0.264    
 
 
 
@@ -1366,34 +1370,34 @@ Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actua
 Min Period        n/a     BUFG/I              n/a            2.155         40.000      37.845     BUFGCTRL_X0Y1    CLK_Converter/inst/clkout1_buf/I
 Min Period        n/a     MMCME2_ADV/CLKOUT0  n/a            1.249         40.000      38.751     MMCME2_ADV_X1Y0  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
 Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X0Y49      VGA_THING/greenOut_reg/C
-Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X0Y44      VGA_THING/greenOut_reg_lopt_replica/C
-Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X6Y47      VGA_THING/hCountOut_reg[0]/C
-Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X6Y47      VGA_THING/hCountOut_reg[1]/C
-Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X6Y47      VGA_THING/hCountOut_reg[2]/C
-Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X6Y47      VGA_THING/hCountOut_reg[3]/C
-Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X4Y47      VGA_THING/hCountOut_reg[4]/C
-Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X4Y47      VGA_THING/hCountOut_reg[5]/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X0Y48      VGA_THING/greenOut_reg_lopt_replica/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X6Y50      VGA_THING/hCountOut_reg[0]/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X6Y50      VGA_THING/hCountOut_reg[1]/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X6Y50      VGA_THING/hCountOut_reg[2]/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X6Y51      VGA_THING/hCountOut_reg[3]/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X6Y51      VGA_THING/hCountOut_reg[4]/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X6Y51      VGA_THING/hCountOut_reg[5]/C
 Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       40.000      173.360    MMCME2_ADV_X1Y0  CLK_Converter/inst/mmcm_adv_inst/CLKOUT0
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X5Y46      VGA_THING/hcount_reg[0]/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X5Y46      VGA_THING/hcount_reg[1]/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X5Y46      VGA_THING/hcount_reg[2]/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X5Y46      VGA_THING/hcount_reg[3]/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X5Y46      VGA_THING/hcount_reg[4]/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X5Y46      VGA_THING/hcount_reg[5]/C
-Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y44      VGA_THING/greenOut_reg_lopt_replica/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y44      VGA_THING/greenOut_reg_lopt_replica/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y47      VGA_THING/hCountOut_reg[0]/C
-Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y47      VGA_THING/hCountOut_reg[1]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y50      VGA_THING/hCountOut_reg[0]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y50      VGA_THING/hCountOut_reg[1]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y50      VGA_THING/hCountOut_reg[2]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y51      VGA_THING/hCountOut_reg[3]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y51      VGA_THING/hCountOut_reg[4]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y51      VGA_THING/hCountOut_reg[5]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y51      VGA_THING/hCountOut_reg[6]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X7Y50      VGA_THING/hCountOut_reg[7]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X7Y52      VGA_THING/hCountOut_reg[8]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X7Y52      VGA_THING/hCountOut_reg[9]/C
 High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y49      VGA_THING/greenOut_reg/C
 High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y49      VGA_THING/greenOut_reg/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y44      VGA_THING/greenOut_reg_lopt_replica/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y44      VGA_THING/greenOut_reg_lopt_replica/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y47      VGA_THING/hCountOut_reg[0]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y47      VGA_THING/hCountOut_reg[0]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y47      VGA_THING/hCountOut_reg[1]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y47      VGA_THING/hCountOut_reg[1]/C
-High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y47      VGA_THING/hCountOut_reg[2]/C
-High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y47      VGA_THING/hCountOut_reg[2]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y48      VGA_THING/greenOut_reg_lopt_replica/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y48      VGA_THING/greenOut_reg_lopt_replica/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y50      VGA_THING/hCountOut_reg[0]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y50      VGA_THING/hCountOut_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y50      VGA_THING/hCountOut_reg[1]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y50      VGA_THING/hCountOut_reg[1]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y50      VGA_THING/hCountOut_reg[2]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X6Y50      VGA_THING/hCountOut_reg[2]/C
 
 
 
