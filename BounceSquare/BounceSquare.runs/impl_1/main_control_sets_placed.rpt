@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Sun Dec  9 17:21:40 2018
+| Date         : Wed Dec 12 18:24:17 2018
 | Host         : DESKTOP-7MRF67A running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
 | Design       : main
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     7 |
-| Unused register locations in slices containing registers |    31 |
+| Number of unique control sets                            |     5 |
+| Unused register locations in slices containing registers |    17 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,7 +35,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              91 |           30 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              44 |           14 |
+| No           | Yes                   | No                     |              42 |           11 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |              10 |            4 |
@@ -48,9 +48,7 @@ Table of Contents
 +----------------------------+---------------+---------------------------------------------+------------------+----------------+
 |        Clock Signal        | Enable Signal |               Set/Reset Signal              | Slice Load Count | Bel Load Count |
 +----------------------------+---------------+---------------------------------------------+------------------+----------------+
-|  CLK_Converter/inst/clkOut |               | VGA_THING/vsync_i_1_n_0                     |                1 |              1 |
-|  CLK_Converter/inst/clkOut |               | VGA_THING/ltOp                              |                1 |              1 |
-|  CLK_Converter/inst/clkOut |               | VGA_THING/sel                               |                4 |             10 |
+|  CLK_Converter/inst/clkOut |               | VGA_THING/sel                               |                3 |             10 |
 |  CLK_Converter/inst/clkOut | VGA_THING/sel | VGA_THING/clear                             |                4 |             10 |
 |  CLK_Converter/inst/clkOut |               |                                             |               11 |             23 |
 |  clk_IBUF_BUFG             |               | ItsASquare/cnt0_inferred__0/i__carry__1_n_1 |                8 |             32 |
@@ -61,7 +59,6 @@ Table of Contents
 +--------+-----------------------+
 | Fanout | Number of ControlSets |
 +--------+-----------------------+
-| 1      |                     2 |
 | 10     |                     2 |
 | 16+    |                     3 |
 +--------+-----------------------+

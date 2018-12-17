@@ -27,10 +27,10 @@ begin
         constant size_y : integer := 10;
 
         --bound of the screen
-        constant leftBound  : integer := 144;
-        constant rightBound : integer := 784;
-        constant upperBound : integer := 31;
-        constant lowerBound : integer := 511;
+        constant leftBound  : integer := 0;
+        constant rightBound : integer := 640;
+        constant upperBound : integer := 0;
+        constant lowerBound : integer := 480;
 
         --coordinates
         variable x : integer := 150;

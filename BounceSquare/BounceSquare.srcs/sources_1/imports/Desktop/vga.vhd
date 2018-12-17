@@ -47,37 +47,37 @@ begin
         vCountOut <= vcount;
 
         if (hcount >= 144) and (hcount < 784) and (vcount >= 31) and (vcount < 511) then
-         redOut <= redIn;
-         greenOut <= greenIn;
-         blueOut <= blueIn;
-       else
-         redOut <= '0';
-         greenOut <= '0';
-         blueOut <= '0';
-       end if;
+            redOut <= redIn;
+            greenOut <= greenIn;
+            blueOut <= blueIn;
+        else
+            redOut <= '0';
+            greenOut <= '0';
+            blueOut <= '0';
+        end if;
 
-       if hcount < 97 then
-         hsync <= '0';
-       else
-         hsync <= '1';
-       end if;
+        if hcount < 97 then
+            hsync <= '0';
+        else
+            hsync <= '1';
+        end if;
 
-       if vcount < 3 then
-         vsync <= '0';
-       else
-         vsync <= '1';
-       end if;
+        if vcount < 3 then
+            vsync <= '0';
+        else
+            vsync <= '1';
+        end if;
 
-       hcount <= hcount + 1;
+        hcount <= hcount + 1;
 
-       if hcount = 800 then
-         vcount <= vcount + 1;
-         hcount <= (others => '0');
-       end if;
+        if hcount = 800 then
+            vcount <= vcount + 1;
+            hcount <= (others => '0');
+        end if;
 
-       if vcount = 521 then
-         vcount <= (others => '0');
-       end if;
+        if vcount = 521 then
+            vcount <= (others => '0');
+        end if;
     end if;
 end process;
 

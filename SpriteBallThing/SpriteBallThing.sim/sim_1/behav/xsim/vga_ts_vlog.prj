@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../SpriteBallThing.srcs/sources_1/ip/clkConverter" \
+"../../../../SpriteBallThing.srcs/sources_1/ip/clkConverter/clkConverter_clk_wiz.v" \
+"../../../../SpriteBallThing.srcs/sources_1/ip/clkConverter/clkConverter.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
